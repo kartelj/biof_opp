@@ -1,0 +1,30 @@
+<section id="tf-funkcije" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Uslovni testovi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Funkcije koje vraćaju True ili False</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Da li je sekvenca bogata sa AT?</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">def</span> is_at_rich(dna):<br>&#160;&#160;&#160;&#160;length = len(dna)<br>&#160;&#160;&#160;&#160;a_count = dna.upper().count(<span style="color:#F0A35E">'A'</span>)<br>&#160;&#160;&#160;&#160;t_count = dna.upper().count(<span style="color:#F0A35E">'T'</span>)<br>&#160;&#160;&#160;&#160;at_content = (a_count + t_count) / length<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> at_content &gt; 0.65:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">return</span> True<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">return</span> False</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Kraće: vrati sam uslov</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">def</span> is_at_rich(dna):<br>&#160;&#160;&#160;&#160;<span style="color:#8FB3AA"># … računanje kao levo</span><br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">return</span> at_content &gt; 0.65</p>
+</div>
+<div style="display:flex;gap:16px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">print(is_at_rich(<span style="color:#F0A35E">"ATTATCTACTA"</span>))<br>print(is_at_rich(<span style="color:#F0A35E">"CGGCAGCGCT"</span>))</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 32px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">True<br>False</p>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.45">Takva funkcija ide direktno u uslov: <span style="color:#A8521A">if is_at_rich(my_dna):</span></p>
+</div>
+</div>
+<aside>True i False su obične ugrađene vrednosti: mogu se čuvati u promenljivama, prosleđivati i vraćati iz funkcija kao brojevi i stringovi. Zato funkcija koja uvek vraća True ili False može da se koristi kao uslov. Granica 0.65 za „bogata sa AT” je izbor iz knjige. Kraća verzija odmah vraća rezultat poređenja; na prvi pogled je neobična, ali je čitljivija kad se naviknete.</aside>
+</section>

@@ -1,0 +1,23 @@
+<section id="elif-ugnezdeno" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Uslovni testovi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Tri grane: ugnežđeni if ili elif</h2>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">if unutar else</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">for</span> accession <span style="color:#6FD3C1">in</span> accs:<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> accession.startswith(<span style="color:#F0A35E">'a'</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file1.write(accession + <span style="color:#F0A35E">"\n"</span>)<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> accession.startswith(<span style="color:#F0A35E">'b'</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file2.write(accession + <span style="color:#F0A35E">"\n"</span>)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file3.write(accession + <span style="color:#F0A35E">"\n"</span>)</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Radi, ali je teško za čitanje: svaka nova grana dodaje još jedan nivo uvlačenja.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">elif = else + if</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">for</span> accession <span style="color:#6FD3C1">in</span> accs:<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> accession.startswith(<span style="color:#F0A35E">'a'</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file1.write(accession + <span style="color:#F0A35E">"\n"</span>)<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">elif</span> accession.startswith(<span style="color:#F0A35E">'b'</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file2.write(accession + <span style="color:#F0A35E">"\n"</span>)<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file3.write(accession + <span style="color:#F0A35E">"\n"</span>)<br>&#160;</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Koliko god grana, uvek samo jedan dodatni nivo uvlačenja.</p>
+</div>
+</div>
+<aside>Zadatak: tri fajla, za brojeve koji počinju sa a, za one koji počinju sa b i za sve ostale. Prvo rešenje stavlja drugi if unutar else prvog; radi, ali svaka dodatna grana traži novi nivo uvlačenja. elif spaja else i if, pa isti program ima samo dva nivoa uvlačenja. Na isti način možemo dodati grane za c, d, e i tako dalje, bez dodatnog uvlačenja. Fajlovi file1, file2 i file3 su otvoreni za pisanje pre petlje.</aside>
+</section>

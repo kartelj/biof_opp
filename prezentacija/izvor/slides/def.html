@@ -1,0 +1,29 @@
+<section id="def" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Pisanje sopstvenih funkcija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Definisanje funkcije</h2>
+</div>
+<div style="display:flex;gap:56px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:24px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">def</span> get_at_content(dna):<br>&#160;&#160;&#160;&#160;length = len(dna)<br>&#160;&#160;&#160;&#160;a_count = dna.count(<span style="color:#F0A35E">'A'</span>)<br>&#160;&#160;&#160;&#160;t_count = dna.count(<span style="color:#F0A35E">'T'</span>)<br>&#160;&#160;&#160;&#160;at_content = (a_count + t_count) / length<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">return</span> at_content</p>
+</div>
+<div style="width:786px;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Pre pisanja odredite ulaz i izlaz: jedan argument tipa string (DNK), a povratna vrednost je broj.</p>
+</div>
+</div>
+<div style="flex:1;display:grid;grid-template-columns:260px 1fr;gap:24px 24px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;line-height:1.45;color:#0F7C6E">def</p>
+<p style="font-size:28px;line-height:1.45">„definiši”: počinje definiciju</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;line-height:1.45;color:#A8521A">get_at_content</p>
+<p style="font-size:28px;line-height:1.45">ime funkcije, proizvoljno</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;line-height:1.45;color:#A8521A">(dna)</p>
+<p style="font-size:28px;line-height:1.45">argument: promenljiva koja dobija vrednost pri pozivu</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;line-height:1.45;color:#A8521A">: i blok</p>
+<p style="font-size:28px;line-height:1.45">telo funkcije, uvučeno kao kod petlje</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;line-height:1.45;color:#0F7C6E">return</p>
+<p style="font-size:28px;line-height:1.45">vrednost koju funkcija vraća</p>
+</div>
+</div>
+<aside>Pisanje funkcije zove se definisanje. Ime funkcije i imena argumenata su proizvoljna, kao i imena promenljivih. Telo može imati koliko god linija, sve sa istim uvlačenjem; u telu argument koristimo preko imena iz prve linije. Povratna vrednost je preciznije tipa float, broj sa decimalnom tačkom. U Pythonu 2 je za deljenje potreban from __future__ import division.</aside>
+</section>

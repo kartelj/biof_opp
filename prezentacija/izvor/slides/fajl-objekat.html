@@ -1,0 +1,26 @@
+<section id="fajl-objekat" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Čitanje i pisanje fajlova</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Fajl objekat: novi tip podataka</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Sa fajlom radimo preko metoda</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># string i broj koristimo direktno</span><br>my_string = <span style="color:#F0A35E">'abcdefg'</span><br>print(my_string)<br>my_number = 42<br>print(my_number + 1)<br><span style="color:#8FB3AA"># fajl objekat: preko metoda</span><br>my_file = open(<span style="color:#F0A35E">"dna.txt"</span>)<br>print(my_file.read())</p>
+</div>
+<p style="font-size:28px;line-height:1.45">String i broj predstavljaju jednu vrednost. Fajl objekat predstavlja fajl na disku.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Imena su proizvoljna, ime fajla nije</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">apple = <span style="color:#F0A35E">"dna.txt"</span><br>banana = open(apple)<br>grape = banana.read()</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Radi isto kao <span style="color:#A8521A">my_file_name</span>, <span style="color:#A8521A">my_file</span> i <span style="color:#A8521A">my_file_contents</span>, samo je teže za čitanje.</p>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Ali <span style="color:#A8521A">"dna.txt"</span> mora biti ime stvarnog fajla na disku.</p>
+</div>
+</div>
+</div>
+<aside>Kod stringova i brojeva je lako razumeti šta predstavljaju: jedan tekst ili jedan broj. Fajl objekat predstavlja nešto manje opipljivo, fajl na hard disku. Zato s njim radimo uglavnom preko metoda (read, write, close), što isprva deluje neobično, ali fajl tip ima dobro osmišljen skup metoda. Ponavljamo važnu ideju iz poglavlja 2: imena promenljivih biramo sami, ali vrednosti, ovde ime fajla, nisu proizvoljne.</aside>
+</section>

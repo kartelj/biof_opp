@@ -1,0 +1,28 @@
+<section id="novi-red" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Čitanje i pisanje fajlova</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Novi red na kraju fajla: rstrip</h2>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_file = open(<span style="color:#F0A35E">"dna.txt"</span>)<br>my_dna = my_file.read()<br>dna_length = len(my_dna)<br>print(<span style="color:#F0A35E">"sequence is "</span> + my_dna + <span style="color:#F0A35E">" and length is "</span> + str(dna_length))</p>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:52px 40px 28px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">sequence is ACTGTACGTGCACTGATC<br>&#160;and length is 19</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 32px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45">Izlaz je u dva reda, a dužina je 19, ne 18: <span style="color:#A8521A">read</span> je vratio i znak za novi red sa kraja fajla, <span style="color:#A8521A">'ACTGTACGTGCACTGATC\n'</span>.</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># ukloni novi red sa kraja</span><br>my_dna = my_file.read().rstrip(<span style="color:#F0A35E">"\n"</span>)</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:52px 40px 28px;display:flex;flex-direction:column;justify-content:end">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">sequence is ACTGTACGTGCACTGATC and length is 18</p>
+</div>
+</div>
+<aside>Lanac metoda my_file.read().rstrip("\n") čita se s leva nadesno: read vraća string, a na tom stringu se poziva rstrip. Ako je teško, isto se može uraditi u dva koraka; program radi jednako dobro. Ceo sadržaj promenljive (sa \n) može se videti funkcijom repr. Nepostojeći fajl: open("nonexistent.txt") daje FileNotFoundError (u Pythonu 2: IOError); proveru da li fajl postoji radimo u poglavlju 9.</aside>
+</section>

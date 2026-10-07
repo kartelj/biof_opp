@@ -1,0 +1,23 @@
+<section id="zasto-liste" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">04 · Liste i petlje</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Kad promenljivih postane previše</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># poglavlje 3: promenljiva za svaku sekvencu</span><br>seq_1 = <span style="color:#F0A35E">"ATCGTACGATCGATCGATCGCTAGACGTATCG"</span><br>seq_2 = <span style="color:#F0A35E">"actgatcgacgatcgatcgatcacgact"</span><br>seq_3 = <span style="color:#F0A35E">"ACTGAC-ACTGT--ACTGTA----CATGTG"</span><br><span style="color:#8FB3AA"># i skoro ista naredba tri puta</span><br>output_1 = open(header_1 + <span style="color:#F0A35E">".fasta"</span>, <span style="color:#F0A35E">"w"</span>)<br>output_2 = open(header_2 + <span style="color:#F0A35E">".fasta"</span>, <span style="color:#F0A35E">"w"</span>)<br>output_3 = open(header_3 + <span style="color:#F0A35E">".fasta"</span>, <span style="color:#F0A35E">"w"</span>)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:36px;line-height:1.35;color:#13262B">A šta sa 300 ili 3000 sekvenci? Ili kad ne znamo unapred koliko ih ima?</p>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 32px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Lista</h3>
+<p style="font-size:28px;line-height:1.45">Jedna promenljiva čuva mnogo vrednosti.</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 32px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Petlja</h3>
+<p style="font-size:28px;line-height:1.45">Ista naredba za svaki element: ponavljanje sa varijacijom.</p>
+</div>
+</div>
+</div>
+<aside>Dosadašnji tipovi (stringovi, brojevi, fajl objekti) čuvaju po jednu vrednost; fajl može da sadrži mnogo podataka, ali jedan fajl objekat i dalje predstavlja jedan fajl. Rešenje iz poglavlja 3 radilo je samo zato što je sekvenci bilo malo i što smo njihov broj znali unapred. Sa stotinama sekvenci najveći deo koda bio bi pravljenje promenljivih, a program koji čita nepoznat broj sekvenci iz fajla ne bismo ni mogli da napišemo. Do sada su se naredbe izvršavale odozgo nadole, jedna po jedna; to je lako pratiti, ali vodi u ponavljanje.</aside>
+</section>

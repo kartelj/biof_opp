@@ -1,0 +1,38 @@
+<section id="unos" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">09 · Fajlovi, programi i korisnički unos</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Tri načina da podaci uđu u program</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:32px;align-items:center">
+<p style="width:360px;font-size:28px;font-weight:600;line-height:1.4;color:#13262B">Ugrađeno u kod (hard-coded)</p>
+<div style="width:820px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">dna = <span style="color:#F0A35E">"ATCGATCGTGACTAGCTACG"</span></p>
+</div>
+<p style="flex:1;font-size:28px;line-height:1.4">Promena ulaza znači izmenu koda.</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center">
+<p style="width:360px;font-size:28px;font-weight:600;line-height:1.4;color:#13262B">Interaktivno: input</p>
+<div style="width:820px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">accession = input(<span style="color:#F0A35E">"Enter the accession name"</span>)</p>
+</div>
+<p style="flex:1;font-size:28px;line-height:1.4">Program čeka korisnika; uvek dobija string.</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center">
+<p style="width:360px;font-size:28px;font-weight:600;line-height:1.4;color:#13262B">Komandna linija: sys.argv</p>
+<div style="width:820px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">$ python myprogram.py one two three</p>
+</div>
+<p style="flex:1;font-size:28px;line-height:1.4">Najbolje za naučne radne tokove.</p>
+</div>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Saveti za korisnički unos</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Prikupite sav unos na početku, pre dugih izračunavanja</li>
+<li>Proverite unos čim stigne (validacija) i dajte korisniku drugu šansu</li>
+<li>Napišite jasna uputstva: program će koristiti i kolege, recenzenti ili vi sami za nekoliko meseci</li>
+</ul>
+</div>
+<aside>Do sada su podaci bili ili upisani u kod, ili čitani iz fajla čije je ime upisano u kod; u oba slučaja promena ulaza zahteva otvaranje koda. Pravi programi primaju ulazne fajlove i opcije pri pokretanju. Dve situacije koje treba izbeći kod input: dugačak program koji usred rada tiho čeka unos dok je korisnik otišao, i program koji posle dugog rada padne zbog greške u unosu, pa sve mora ispočetka. Interaktivni unos otežava pokretanje bez nadzora u radnom toku, pa su argumenti komandne linije za većinu bioloških analiza bolji izbor. Napomena: u Pythonu 2 ova funkcija se zove raw_input.</aside>
+</section>

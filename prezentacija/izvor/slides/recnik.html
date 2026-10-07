@@ -1,0 +1,22 @@
+<section id="recnik" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">08 · Rečnici</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Rečnik: od ključa do vrednosti</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">enzymes = {<br>&#160;&#160;&#160;&#160;<span style="color:#F0A35E">'EcoRI'</span> : <span style="color:#F0A35E">r'GAATTC'</span>,<br>&#160;&#160;&#160;&#160;<span style="color:#F0A35E">'AvaII'</span> : <span style="color:#F0A35E">r'GG(A|T)CC'</span>,<br>&#160;&#160;&#160;&#160;<span style="color:#F0A35E">'BisI'</span>&#160;&#160;: <span style="color:#F0A35E">r'GC[ATGC]GC'</span><br>}<br>print(enzymes[<span style="color:#F0A35E">'BisI'</span>])&#160;&#160;<span style="color:#8FB3AA"># GC[ATGC]GC</span><br><span style="color:#8FB3AA"># prazan rečnik, pa dodavanje stavki</span><br>enzymes = {}<br>enzymes[<span style="color:#F0A35E">'EcoRI'</span>] = <span style="color:#F0A35E">r'GAATTC'</span><br><span style="color:#8FB3AA"># pop vraća vrednost i briše ključ</span><br>enzymes.pop(<span style="color:#F0A35E">'EcoRI'</span>)</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Pravila</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Vitičaste zagrade; stavka je par <span style="color:#A8521A">ključ: vrednost</span>, a stavke se razdvajaju zarezima</li>
+<li>Pristup: <span style="color:#A8521A">rečnik[ključ]</span>, kao kod liste, ali sa ključem umesto indeksa</li>
+<li>Ključevi su stringovi ili brojevi i moraju biti jedinstveni</li>
+<li>Vrednosti mogu biti bilo kog tipa</li>
+<li>Dodavanje: <span style="color:#A8521A">rečnik[ključ] = vrednost</span></li>
+</ul>
+</div>
+</div>
+<aside>Rečnik iz primera čuva restrikcione enzime iz prethodnog poglavlja: ključ je ime enzima, a vrednost šablon (sirov string). Pisanje u više redova je samo radi čitljivosti. U praksi rečnik retko pravimo odjednom; češće počinjemo od praznog i dodajemo stavke, kao što listu gradimo sa append. Ključevi zapravo mogu biti bilo kog nepromenljivog tipa, ali to izlazi iz okvira knjige. U knjizi u ovom primeru nedostaje zatvoreni navodnik kod 'AvaII', ovde je ispravljeno.</aside>
+</section>

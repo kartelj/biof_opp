@@ -1,0 +1,30 @@
+<section id="count-find" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Štampanje i rad sa tekstom</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Brojanje i traženje podstringova</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="display:flex;gap:16px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">protein = <span style="color:#F0A35E">"vlspadktnv"</span><br>print(protein.count(<span style="color:#F0A35E">'v'</span>))<br>print(protein.count(<span style="color:#F0A35E">'lsp'</span>))<br>print(protein.count(<span style="color:#F0A35E">'w'</span>))<br>print(protein.find(<span style="color:#F0A35E">'p'</span>))<br>print(protein.find(<span style="color:#F0A35E">'kt'</span>))<br>print(protein.find(<span style="color:#F0A35E">'w'</span>))</p>
+</div>
+<div style="width:180px;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:16px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">&#160;<br>2<br>1<br>0<br>3<br>6<br>-1</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px">
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li><span style="color:#A8521A">count</span> vraća broj pojavljivanja (int)</li>
+<li><span style="color:#A8521A">find</span> vraća indeks prvog pojavljivanja, a <span style="color:#A8521A">-1</span> ako podstringa nema</li>
+<li>Redosled je bitan: <span style="color:#A8521A">my_dna.count(my_motif)</span> nije isto što i <span style="color:#A8521A">my_motif.count(my_dna)</span></li>
+</ul>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Oba traže samo tačne podstringove. Za promenljive motive, kao što su vezivna mesta transkripcionih faktora, trebaju nam regularni izrazi (poglavlje 7).</p>
+</div>
+</div>
+</div>
+<aside>Brojanje motiva u sekvenci je jedan od najčešćih zadataka u biologiji; u programerskim terminima to je brojanje pojavljivanja podstringa u stringu. U knjizi se brojevi pretvaraju sa str pre ispisa, jer se spajaju sa tekstom; ovde ih ispisujemo direktno. Napomena: knjiga u ovom primeru greškom ispisuje „leucines” za brojanje podstringa lsp.</aside>
+</section>

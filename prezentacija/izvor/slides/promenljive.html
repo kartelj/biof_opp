@@ -1,0 +1,39 @@
+<section id="promenljive" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Štampanje i rad sa tekstom</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Specijalni karakteri i promenljive</h2>
+</div>
+<div style="display:flex;gap:56px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Specijalni karakteri</h3>
+<div style="display:grid;grid-template-columns:96px 1fr;gap:8px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.45;color:#A8521A">\n</p>
+<p style="font-size:28px;line-height:1.45">novi red</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.45;color:#A8521A">\t</p>
+<p style="font-size:28px;line-height:1.45">tab</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.45;color:#A8521A">\r</p>
+<p style="font-size:28px;line-height:1.45">povratak na početak reda, bez novog reda</p>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">print(<span style="color:#F0A35E">"Hello\nworld"</span>)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">Hello<br>world</p>
+</div>
+</div>
+<div style="flex:1.2;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Promenljive</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># DNK sekvenca u promenljivoj my_dna</span><br>my_dna = <span style="color:#F0A35E">"ATGCGTA"</span><br>print(my_dna)<br><span style="color:#8FB3AA"># nova vrednost iste promenljive</span><br>my_dna = <span style="color:#F0A35E">"TGGTCCA"</span></p>
+</div>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Ime je proizvoljno, ali neka opisuje sadržaj: <span style="color:#A8521A">my_dna</span> je dobro ime, <span style="color:#A8521A">banana</span> loše</li>
+<li>Samo slova, cifre i _, a ime ne počinje cifrom</li>
+<li>Ne koristite ugrađene reči, npr. <span style="color:#A8521A">print</span></li>
+<li>Velika i mala slova se razlikuju: <span style="color:#A8521A">my_dna</span> i <span style="color:#A8521A">MY_DNA</span> su dve promenljive</li>
+</ul>
+</div>
+</div>
+<aside>Pri ispisu promenljive ne pišemo navodnike: navodnici su deo zapisa stringa, već "ugrađeni" u vrednost. Imena promenljivih su proizvoljna: ta ideja se provlači kroz celu knjigu. Ne dajte se zavarati imenom kao my_file = "my_file.txt": ime promenljive i string su dve odvojene stvari. Iako je tehnički dozvoljeno koristiti my_dna i My_DNA kao različite promenljive, to vodi u zabunu.</aside>
+</section>

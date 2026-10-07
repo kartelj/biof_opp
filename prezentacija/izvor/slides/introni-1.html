@@ -1,0 +1,32 @@
+<section id="introni-1" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Vežba: isecanje introna</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Prvi pokušaj: greška za jedan</h2>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Pogrešno</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">exon1 = my_dna[1:63]<br>exon2 = my_dna[91:10000]<br>print(exon1 + exon2)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">TCGATCGATCGATCGACTGACTAG…</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Rezultat počinje drugom bazom: svi brojevi su za jedan preveliki.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Ispravno</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">exon1 = my_dna[0:63]<br>exon2 = my_dna[90:10000]<br>print(exon1 + exon2)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">ATCGATCGATCGATCGACTGACTAG…</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Baza broj n ima indeks n − 1, a kraj isečka nije uključen: baze 1–63 su <span style="color:#A8521A">[0:63]</span>.</p>
+</div>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Postavka: egzon 1 ide od početka do 63. baze, egzon 2 od 91. baze do kraja; između je intron.</p>
+</div>
+<aside>Program radi posao spliceozoma: deli sekvencu na tri dela i spaja spoljna dva (kao konceptualni model). Broj 10000 je namerno prevelik: kraj iza kraja stringa znači „do kraja”, pa ne moramo da računamo dužinu. Napomena uz knjigu: u rešenju knjiga koristi my_dna[0:62] i intron [62:90], čime 63. baza završava u intronu. Pošto egzon ide do 63. baze uključno, ispravno je [0:63], a intron je [63:90]. Na ostalim slajdovima koristimo ispravljene granice, pa se procenat razlikuje od knjige (78.0 umesto 77.2).</aside>
+</section>

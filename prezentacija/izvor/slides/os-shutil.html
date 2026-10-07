@@ -1,0 +1,31 @@
+<section id="os-shutil" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">09 · Fajlovi, programi i korisnički unos</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Fajlovi i folderi: os i shutil</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<table style="flex:1;font-family:'IBM Plex Sans', Arial, sans-serif;font-size:28px;color:#3D4F52">
+<tr style="background:#E3EEEA"><th style="width:56%;text-align:left">Zadatak</th><th style="width:44%;text-align:left">Funkcija</th></tr>
+<tr><td>preimenuj ili premesti</td><td style="color:#A8521A">os.rename</td></tr>
+<tr><td>napravi folder</td><td style="color:#A8521A">os.mkdir</td></tr>
+<tr><td>napravi više foldera</td><td style="color:#A8521A">os.makedirs</td></tr>
+<tr><td>kopiraj fajl</td><td style="color:#A8521A">shutil.copy</td></tr>
+<tr><td>kopiraj folder</td><td style="color:#A8521A">shutil.copytree</td></tr>
+</table>
+<table style="flex:1;font-family:'IBM Plex Sans', Arial, sans-serif;font-size:28px;color:#3D4F52">
+<tr style="background:#E3EEEA"><th style="width:56%;text-align:left">Zadatak</th><th style="width:44%;text-align:left">Funkcija</th></tr>
+<tr><td>da li postoji?</td><td style="color:#A8521A">os.path.exists</td></tr>
+<tr><td>obriši fajl</td><td style="color:#A8521A">os.remove</td></tr>
+<tr><td>obriši prazan folder</td><td style="color:#A8521A">os.rmdir</td></tr>
+<tr><td>obriši folder sa sadržajem</td><td style="color:#A8521A">shutil.rmtree</td></tr>
+<tr><td>sadržaj foldera</td><td style="color:#A8521A">os.listdir</td></tr>
+</table>
+</div>
+<div style="display:flex;gap:40px;align-items:center">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">import</span> os<br><span style="color:#6FD3C1">for</span> file_name <span style="color:#6FD3C1">in</span> os.listdir(<span style="color:#F0A35E">"."</span>):<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> file_name.endswith(<span style="color:#F0A35E">".dna"</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"reading sequences from "</span> + file_name)</p>
+</div>
+<p style="flex:1;font-size:28px;line-height:1.45">Isti kod radi na Linuxu, macOS-u i Windowsu. Putanje se ipak razlikuju; <span style="color:#A8521A">"."</span> je trenutni folder.</p>
+</div>
+<aside>Funkcije primaju putanje kao stringove. os.rename sa istim imenom fajla u drugom folderu premešta fajl, a radi i za foldere. Premeštanje u folder koji ne postoji daje grešku, pa folder prvo pravimo sa os.mkdir. Napomena uz knjigu: funkcija za pravljenje više ugnežđenih foldera zove se os.makedirs (u knjizi piše os.mkdirs). Primer sa os.path.exists iz knjige: if os.path.exists("/home/martin/email.txt"): print("You have mail!"). Kod ovih funkcija greške mogu dolaziti spolja: fajl ne postoji ili nemamo dozvolu da ga menjamo.</aside>
+</section>

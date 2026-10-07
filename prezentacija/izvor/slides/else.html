@@ -1,0 +1,26 @@
+<section id="else" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Uslovni testovi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">else: jedno ili drugo</h2>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Dve grane</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">expression_level = 125<br><span style="color:#6FD3C1">if</span> expression_level &gt; 100:<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"gene is highly expressed"</span>)<br><span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"gene is lowly expressed"</span>)</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Izvršava se tačno jedna od dve grane; ovde prva.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Podela u dva fajla</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">file1 = open(<span style="color:#F0A35E">"one.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br>file2 = open(<span style="color:#F0A35E">"two.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br><span style="color:#6FD3C1">for</span> accession <span style="color:#6FD3C1">in</span> accs:<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> accession.startswith(<span style="color:#F0A35E">'a'</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file1.write(accession + <span style="color:#F0A35E">"\n"</span>)<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file2.write(accession + <span style="color:#F0A35E">"\n"</span>)</p>
+</div>
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">one.txt</span>: ab56, ay93, ap97 · <span style="color:#A8521A">two.txt</span>: bh84, hv76, bd72</p>
+</div>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">else</span> nema svoj uslov: njegov blok se izvršava kad blok if nije. if i else stoje na istom nivou uvlačenja.</p>
+</div>
+<aside>if odgovara na pitanje „da ili ne”: da li da ispišemo pristupni broj. Često nam treba izbor između dve akcije, „ili jedno ili drugo”, i tada iza bloka if dodajemo else. U drugom primeru brojevi koji počinju sa a idu u prvi fajl, a svi ostali u drugi. Lista accs je ista kao na prethodnom slajdu.</aside>
+</section>

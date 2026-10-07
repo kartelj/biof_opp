@@ -1,0 +1,33 @@
+<section id="moduli" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Regularni izrazi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Modul re, sirovi stringovi i re.search</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Moduli</h3>
+<p style="font-size:28px;line-height:1.45">Specijalizovani alati se učitavaju naredbom <span style="color:#A8521A">import</span>, a njihove funkcije pozivamo sa prefiksom imena modula.</p>
+<div style="background:#13262B;border-radius:12px;padding:16px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">import</span> re<br>re.search(pattern, string)</p>
+</div>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Sirovi stringovi</h3>
+<p style="font-size:28px;line-height:1.45">Slovo <span style="color:#A8521A">r</span> ispred navodnika isključuje specijalne karaktere poput <span style="color:#A8521A">\n</span> i <span style="color:#A8521A">\t</span>, kojih u šablonima ima mnogo.</p>
+<div style="background:#13262B;border-radius:12px;padding:16px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">print(<span style="color:#F0A35E">r"\t\n"</span>)<br><span style="color:#8FB3AA"># ispisuje: \t\n</span></p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">dna = <span style="color:#F0A35E">"ATCGCGAATTCAC"</span><br><span style="color:#6FD3C1">if</span> re.search(<span style="color:#F0A35E">r"GAATTC"</span>, dna):<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"restriction site found!"</span>)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px;display:flex;flex-direction:column;justify-content:center">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">restriction site found!</p>
+</div>
+<p style="flex:1;font-size:28px;line-height:1.45;align-self:center"><span style="color:#A8521A">re.search(šablon, string)</span> proverava da li se šablon javlja bilo gde u stringu.</p>
+</div>
+<aside>Osnovni alati (stringovi, brojevi, fajlovi, liste) dostupni su u svakom programu. Specijalizovani alati, za matematiku, preuzimanje sa interneta, pokretanje programa ili rad sa datumima, grupisani su u module i moramo ih eksplicitno učitati. Zaboravljen import ili prefiks re. daje NameError. U svim primerima ovog poglavlja podrazumeva se import re na početku. Šablon GAATTC (EcoRI) nema specijalnih karaktera, ali sirovi string ipak koristimo iz navike. re.search ne vraća bukvalno True, nego match objekat koji se u uslovu ponaša kao tačan; o tome uskoro.</aside>
+</section>

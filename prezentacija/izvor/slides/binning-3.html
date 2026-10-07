@@ -1,0 +1,26 @@
+<section id="binning-3" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">09 · Vežba: razvrstavanje sekvenci</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 3: folderi i imena fajlova</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">import</span> os<br><span style="color:#8FB3AA"># po jedan folder za svaki opseg</span><br><span style="color:#6FD3C1">for</span> bin_lower <span style="color:#6FD3C1">in</span> range(100, 1000, 100):<br>&#160;&#160;&#160;&#160;bin_upper = bin_lower + 99<br>&#160;&#160;&#160;&#160;bin_folder_name = str(bin_lower) + <span style="color:#F0A35E">"_"</span> + str(bin_upper)<br>&#160;&#160;&#160;&#160;os.mkdir(bin_folder_name)<br><span style="color:#8FB3AA"># brojač sekvenci za imena fajlova</span><br>seq_number = 1</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<div style="background:#FCFBF7;border:2px solid #DCDDD5;border-radius:16px;padding:24px 32px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">NOVI FOLDERI</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">100_199 200_299 300_399<br>400_499 500_599 600_699<br>700_799 800_899 900_999</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px">
+<p style="font-size:28px;line-height:1.45">Ime foldera: donja granica, donja crta, gornja granica. Isto pravilo koristimo i pri upisu.</p>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 28px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Imena fajlova nisu zadata: 1.dna, 2.dna, … uz brojač koji raste posle svakog upisa.</p>
+</div>
+</div>
+</div>
+<aside>Folderi se prave samo jednom, na početku programa, istom idejom sa range. Pošto opis vežbe ne propisuje imena fajlova, rešenje iz knjige bira najjednostavnije: prvu sekvencu upisuje u 1.dna, drugu u 2.dna i tako dalje. Za to treba dodatna promenljiva sa rednim brojem, koja se povećava posle svakog upisa. Ako folderi već postoje (npr. pri drugom pokretanju), os.mkdir prijavljuje grešku; tada ih treba obrisati ili prvo proveriti sa os.path.exists.</aside>
+</section>

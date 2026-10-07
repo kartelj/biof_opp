@@ -1,0 +1,22 @@
+<section id="komplement-privremena" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Vežba: komplement DNK</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Dva ispravna rešenja</h2>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Privremena slova</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">replacement1 = my_dna.replace(<span style="color:#F0A35E">'A'</span>, <span style="color:#F0A35E">'H'</span>)<br>replacement2 = replacement1.replace(<span style="color:#F0A35E">'T'</span>, <span style="color:#F0A35E">'J'</span>)<br>replacement3 = replacement2.replace(<span style="color:#F0A35E">'C'</span>, <span style="color:#F0A35E">'K'</span>)<br>replacement4 = replacement3.replace(<span style="color:#F0A35E">'G'</span>, <span style="color:#F0A35E">'L'</span>)<br>replacement5 = replacement4.replace(<span style="color:#F0A35E">'H'</span>, <span style="color:#F0A35E">'T'</span>)<br>replacement6 = replacement5.replace(<span style="color:#F0A35E">'J'</span>, <span style="color:#F0A35E">'A'</span>)<br>replacement7 = replacement6.replace(<span style="color:#F0A35E">'K'</span>, <span style="color:#F0A35E">'G'</span>)<br>replacement8 = replacement7.replace(<span style="color:#F0A35E">'L'</span>, <span style="color:#F0A35E">'C'</span>)<br>print(replacement8)</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Mala slova, korak po korak</h3>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">tCTGtTCGtTTtCGTtTtGTtTTTGCTtTCtTtCtT…<br>tCaGtaCGtaatCGatatGataaaGCataCtatCta…<br>tgaGtagGtaatgGatatGataaaGgatagtatgta…<br>tgactagctaatgcatatcataaacgatagtatgta…<br>TGACTAGCTAATGCATATCATAAACGATAGTATGTA…</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Zamena razlikuje velika i mala slova, pa se već zamenjene baze više ne diraju. Na kraju <span style="color:#A8521A">upper()</span> vraća velika slova.</p>
+</div>
+</div>
+<aside>Prvo rešenje koristi privremenu „azbuku” od četiri slova: A prvo postaje H, a tek kasnije H postaje T, pa se zamene ne mešaju. Drugo rešenje je elegantnije: koristi to što replace razlikuje velika i mala slova. Desno je izlaz programa koji posle svake od četiri zamene ispisuje međurezultat, a na kraju i rezultat velikim slovima (prikazano je prvih 36 baza). Oba rešenja daju TGACTAGCTAATGCATATCATAAACGATAGTATGTATATATAGCTACGCAAGTA.</aside>
+</section>

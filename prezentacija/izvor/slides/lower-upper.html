@@ -1,0 +1,26 @@
+<section id="lower-upper" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Štampanje i rad sa tekstom</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">lower i upper ne menjaju original</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="display:flex;gap:16px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_dna = <span style="color:#F0A35E">"ATGC"</span><br>print(<span style="color:#F0A35E">"before: "</span> + my_dna)<br>lowercase_dna = my_dna.lower()<br>print(<span style="color:#F0A35E">"after: "</span> + my_dna)<br>print(<span style="color:#F0A35E">"lower: "</span> + lowercase_dna)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:16px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">&#160;<br>before: ATGC<br>&#160;<br>after: ATGC<br>lower: atgc</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Metod pripada tipu</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_number = len(<span style="color:#F0A35E">"AGTC"</span>)<br>print(my_number.lower())</p>
+</div>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#A8521A">AttributeError: 'int' object has no attribute 'lower'</p>
+<p style="font-size:28px;line-height:1.45">Broj (int) nema metod lower. Metodi rade samo na tipu kojem pripadaju.</p>
+</div>
+</div>
+<aside>Metod je kao funkcija, ali ne pripada jeziku uopšte, nego određenom tipu. lower pripada stringovima; poziva se tako što posle promenljive pišemo tačku, ime metoda i zagrade (ovde prazne, jer nema argumenata). lower ne menja promenljivu, nego vraća kopiju malim slovima, što ispis pre i posle dokazuje. Postoji i upper, koji pravi velika slova. Poruka AttributeError je pomalo kriptična, ali smisao je jasan: celi broj nema atribut lower.</aside>
+</section>

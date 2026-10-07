@@ -1,0 +1,27 @@
+<section id="digestija-4" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Vežba: dvostruka digestija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 4: dva enzima i sortiranje</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">all_cuts = [0]<br><span style="color:#6FD3C1">for</span> match <span style="color:#6FD3C1">in</span> re.finditer(<span style="color:#F0A35E">r"A[ATGC]TAAT"</span>, dna):<br>&#160;&#160;&#160;&#160;all_cuts.append(match.start() + 3)<br><span style="color:#6FD3C1">for</span> match <span style="color:#6FD3C1">in</span> re.finditer(<span style="color:#F0A35E">r"GC[AG][AT]TG"</span>, dna):<br>&#160;&#160;&#160;&#160;all_cuts.append(match.start() + 4)<br>all_cuts.append(len(dna))<br>sorted_cuts = sorted(all_cuts)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:20px 32px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">BEZ SORTIRANJA</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">[0, 1143, 1628, 488, 1577, 2012]</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">1143, 485, <span style="color:#A8521A">-1140</span>, 1089, 435</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:20px 32px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">SA SORTED</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">[0, 488, 1143, 1577, 1628, 2012]</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">488, 655, 434, 51, 384</p>
+</div>
+</div>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Računanje dužina pretpostavlja rastući redosled mesta sečenja. Negativan fragment je jasan znak da nešto nije u redu; <span style="color:#A8521A">sorted</span> to rešava.</p>
+</div>
+<aside>Drugi enzim dodajemo još jednom petljom, sa svojim šablonom i pomakom mesta sečenja (+4). Ali lista sada nije sortirana: prvo idu mesta prvog enzima, pa mesta drugog. Metod iz prethodnog koraka tada daje očigledno pogrešne dužine, uključujući i negativnu. Ugrađena funkcija sorted vraća sortiranu kopiju liste, pa petlju za dužine pokrećemo nad sorted_cuts. Napomena: knjiga za poslednji nesortirani fragment navodi 434; tačna razlika 2012 − 1577 je 435. Dužine posle sortiranja nisu navedene u knjizi, nego su izračunate iz njenih pozicija.</aside>
+</section>

@@ -1,0 +1,29 @@
+<section id="csv-1" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Vežbe: data.csv</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 1: linija postaje kolone</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="width:760px;font-size:28px;line-height:1.45;color:#13262B">Svaka linija: vrsta, sekvenca, ime gena i nivo ekspresije, razdvojeni zarezima.</p>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">data = open(<span style="color:#F0A35E">"data.csv"</span>)<br><span style="color:#6FD3C1">for</span> line <span style="color:#6FD3C1">in</span> data:<br>&#160;&#160;&#160;&#160;columns = line.rstrip(<span style="color:#F0A35E">"\n"</span>).split(<span style="color:#F0A35E">","</span>)<br>&#160;&#160;&#160;&#160;species = columns[0]<br>&#160;&#160;&#160;&#160;sequence = columns[1]<br>&#160;&#160;&#160;&#160;name = columns[2]<br>&#160;&#160;&#160;&#160;expression = columns[3]<br>&#160;&#160;&#160;&#160;print(name)</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:grid;grid-template-columns:150px 1fr;gap:12px 20px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#A8521A">pogl. 3</p>
+<p style="font-size:28px;line-height:1.45">otvaranje fajla</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#A8521A">pogl. 4</p>
+<p style="font-size:28px;line-height:1.45">linija po linija; split u kolone</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#A8521A">pogl. 6</p>
+<p style="font-size:28px;line-height:1.45">uslov: ispisati ili ne</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">kdy647<br>jdg766<br>kdy533<br>hdt739<br>hdu045<br>teg436</p>
+</div>
+</div>
+</div>
+<aside>Fajl data.csv (folder chapter_6) sadrži izmišljene podatke za nekoliko gena. CSV znači Comma Separated Values; zamislite tabelu u kojoj je linija red, a polje kolona. Ove vežbe kombinuju gradivo iz više poglavlja. Pre nego što nastavite, otvorite fajl u editoru i pogledajte ga. Prvi program još ne radi ništa korisno, ali proverava da li dobro čitamo kolone: rstrip uklanja novi red pre deljenja, a redosled polja znamo iz opisa vežbe.</aside>
+</section>

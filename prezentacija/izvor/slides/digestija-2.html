@@ -1,0 +1,33 @@
+<section id="digestija-2" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Vežba: dvostruka digestija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 2: lista svih mesta sečenja</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex">
+<div style="width:945px;background:#CFE3DD;border:2px solid #0F7C6E;border-radius:12px 0 0 12px;padding:16px 0"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.4;text-align:center;color:#13262B">1143</p></div>
+<div style="width:401px;background:#F0A35E;border:2px solid #A8521A;padding:16px 0"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.4;text-align:center;color:#13262B">485</p></div>
+<div style="width:318px;background:#CFE3DD;border:2px solid #0F7C6E;border-radius:0 12px 12px 0;padding:16px 0"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.4;text-align:center;color:#13262B">384</p></div>
+</div>
+<div style="display:flex">
+<p style="width:945px;font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;color:#5F6F70">0</p>
+<p style="width:401px;font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;color:#5F6F70">1143</p>
+<div style="width:318px;display:flex;justify-content:space-between">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;color:#5F6F70">1628</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;color:#5F6F70">2012</p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">all_cuts = [0]<br><span style="color:#6FD3C1">for</span> match <span style="color:#6FD3C1">in</span> re.finditer(<span style="color:#F0A35E">r"A[ATGC]TAAT"</span>, dna):<br>&#160;&#160;&#160;&#160;all_cuts.append(match.start() + 3)<br>all_cuts.append(len(dna))<br>print(all_cuts)</p>
+</div>
+<div style="width:420px;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px;display:flex;flex-direction:column;justify-content:end">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">[0, 1143, 1628, 2012]</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:20px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B">„Zamišljena” mesta sečenja na početku (0) i na kraju (dužina).</p>
+</div>
+</div>
+<aside>Kako od mesta sečenja doći do dužina? Ideja iz knjige: prolazimo kroz mesta sečenja redom i za svako merimo rastojanje do prethodnog; to je dužina jednog fragmenta. Da bi to radilo i za prvi i za poslednji fragment, dodajemo zamišljena mesta sečenja na početku i na kraju sekvence. Lista all_cuts počinje sa jednim elementom, nulom; u petlji dodajemo stvarna mesta, a posle petlje dužinu sekvence. Traka iznad prikazuje fragmente u razmeri: dva sečenja daju tri fragmenta.</aside>
+</section>

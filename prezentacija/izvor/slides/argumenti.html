@@ -1,0 +1,29 @@
+<section id="argumenti" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Pisanje sopstvenih funkcija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Imenovani argumenti i podrazumevane vrednosti</h2>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Imenovani argumenti</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">get_at_content(<span style="color:#F0A35E">"ATCGTGACTCG"</span>, 2)<br>get_at_content(dna=<span style="color:#F0A35E">"ATCGTGACTCG"</span>, sig_figs=2)<br>get_at_content(sig_figs=2, dna=<span style="color:#F0A35E">"ATCGTGACTCG"</span>)<br>get_at_content(<span style="color:#F0A35E">"ATCGTGACTCG"</span>, sig_figs=2)<br><span style="color:#8FB3AA"># greška: posle imenovanog ne ide običan</span><br>get_at_content(dna=<span style="color:#F0A35E">"ATCGTGACTCG"</span>, 2)</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Prva četiri poziva su ista. Redosled imenovanih argumenata nije bitan, a poziv je čitljiviji.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Podrazumevane vrednosti</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">def</span> get_at_content(dna, sig_figs=2):<br>&#160;&#160;&#160;&#160;<span style="color:#8FB3AA"># … telo kao ranije</span><br>get_at_content(<span style="color:#F0A35E">"ATCGTGACTCG"</span>)<br>get_at_content(<span style="color:#F0A35E">"ATCGTGACTCG"</span>, 3)<br>get_at_content(<span style="color:#F0A35E">"ATCGTGACTCG"</span>, sig_figs=4)</p>
+</div>
+<div style="display:flex;gap:16px;align-items:stretch">
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:52px 40px 28px">
+<p style="position:absolute;right:16px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">0.45<br>0.455<br>0.4545</p>
+</div>
+<p style="flex:1;font-size:28px;line-height:1.45">Podrazumevana vrednost ima smisla samo kad postoji razuman izbor; za <span style="color:#A8521A">dna</span> ne postoji.</p>
+</div>
+</div>
+</div>
+<aside>Da bismo koristili funkciju, treba da znamo broj, tip i redosled argumenata i tip povratne vrednosti. Imenovani (keyword) argumenti uklanjaju potrebu da pamtimo redosled i rade i sa metodima. Stilovi se mogu mešati, ali posle imenovanog argumenta ne sme da dođe običan (pozicioni). Podrazumevane vrednosti smo već sreli kod open, gde je režim podrazumevano "r". Korisne su za opcije koje se retko menjaju.</aside>
+</section>

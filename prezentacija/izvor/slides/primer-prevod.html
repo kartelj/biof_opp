@@ -1,0 +1,33 @@
+<section id="primer-prevod" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">08 · Vežba: prevođenje DNK</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Konačno rešenje</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">gencode = {<br>&#160;&#160;&#160;&#160;<span style="color:#F0A35E">'ATA'</span>:<span style="color:#F0A35E">'I'</span>, <span style="color:#F0A35E">'ATC'</span>:<span style="color:#F0A35E">'I'</span>, <span style="color:#F0A35E">'ATT'</span>:<span style="color:#F0A35E">'I'</span>, <span style="color:#F0A35E">'ATG'</span>:<span style="color:#F0A35E">'M'</span>,<br>&#160;&#160;&#160;&#160;<span style="color:#8FB3AA"># … svih 64 kodona …</span><br>&#160;&#160;&#160;&#160;<span style="color:#F0A35E">'TGC'</span>:<span style="color:#F0A35E">'C'</span>, <span style="color:#F0A35E">'TGT'</span>:<span style="color:#F0A35E">'C'</span>, <span style="color:#F0A35E">'TGA'</span>:<span style="color:#F0A35E">'_'</span>, <span style="color:#F0A35E">'TGG'</span>:<span style="color:#F0A35E">'W'</span>}<br>&#160;<br><span style="color:#6FD3C1">def</span> translate_dna(dna):<br>&#160;&#160;&#160;&#160;last_codon_start = len(dna) - 2<br>&#160;&#160;&#160;&#160;protein = <span style="color:#F0A35E">""</span><br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">for</span> start <span style="color:#6FD3C1">in</span> range(0, last_codon_start, 3):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;codon = dna[start:start+3]<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;aa = gencode.get(codon.upper(), <span style="color:#F0A35E">'X'</span>)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;protein = protein + aa<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">return</span> protein</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 32px;display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:center">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70">DNK</p>
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70">Protein</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#5F6F70">ATGTTCGGT</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#13262B">MFG</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#5F6F70">ATCGATCGATCGTTGCTTATCGATCAG</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#13262B">IDRSLLIDQ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#5F6F70">actgatcgtagcttgcttacgtatcgtat</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#13262B">TDRSLLTYR</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#5F6F70">ACGATCGATCGTNACGTACGATCGTACTCG</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#13262B">TIDRXVRSYS</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 32px">
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li><span style="color:#A8521A">len(dna) - 2</span>: poslednji kodon mora biti ceo</li>
+<li><span style="color:#A8521A">codon.upper()</span>: radi i za mala slova</li>
+<li><span style="color:#A8521A">get(…, 'X')</span>: kodon sa N postaje X</li>
+</ul>
+</div>
+</div>
+</div>
+<aside>Plan iz knjige: podeliti sekvencu na kodone, prevesti svaki kodon i spojiti aminokiseline. Kodoni se ne mogu dobiti sa split jer između njih nema graničnika, pa koristimo range sa korakom 3. Kraj opsega je len(dna) - 2 da ne bismo dobili nepotpune ili prazne kodone. Kroz testove su otkrivena dva problema: sekvenca malim slovima (rešenje upper) i nepoznata baza N, koja daje kodon kojeg nema u rečniku; get bez podrazumevane vrednosti vraća None, pa spajanje pada sa TypeError. Rešenje: X za nepoznatu aminokiselinu. Na kraju se testovi pretvaraju u assert naredbe. Stop kodoni su u rečniku označeni donjom crtom.</aside>
+</section>

@@ -1,0 +1,21 @@
+<section id="definicija-poziv" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Pisanje sopstvenih funkcija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Definicija nije poziv</h2>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># poziv bez čuvanja rezultata: vrednost se gubi</span><br>get_at_content(<span style="color:#F0A35E">"ATGACTGGACCA"</span>)<br><span style="color:#8FB3AA"># sačuvajte rezultat u promenljivoj…</span><br>at_content = get_at_content(<span style="color:#F0A35E">"ATGACTGGACCA"</span>)<br><span style="color:#8FB3AA"># …ili ga odmah iskoristite</span><br>print(<span style="color:#F0A35E">"AT content is "</span> + str(get_at_content(<span style="color:#F0A35E">"ATGACTGGACCA"</span>)))</p>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Argument čeka vrednost</h3>
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">dna</span> nema vrednost pri definiciji. Dobija je pri svakom pozivu, i to svaki put drugu, kao promenljiva petlje.</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Opseg (scope)</h3>
+<p style="font-size:28px;line-height:1.45">Promenljive napravljene u funkciji ne postoje van nje:</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#A8521A">print(a_count) → NameError: name 'a_count' is not defined</p>
+</div>
+</div>
+<aside>Kod iz definicije ne radi ništa dok funkciju ne pozovemo. Ako je samo pozovemo, izračunati AT sadržaj nestaje; povratnu vrednost moramo sačuvati u promenljivoj ili odmah iskoristiti, npr. u print. Isto pravilo opsega važi i za promenljivu petlje.</aside>
+</section>

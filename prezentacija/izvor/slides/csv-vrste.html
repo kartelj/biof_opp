@@ -1,0 +1,29 @@
+<section id="csv-vrste" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Vežbe: data.csv</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Vrsta i dužina sekvence</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Geni iz D. melanogaster ili D. simulans</h3>
+<div style="display:flex;gap:16px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># … čitanje kolona kao u koraku 1, pa:</span><br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> species == <span style="color:#F0A35E">"Drosophila melanogaster"</span> <span style="color:#6FD3C1">or</span> species == <span style="color:#F0A35E">"Drosophila simulans"</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name)</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 36px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">kdy647<br>jdg766<br>kdy533</p>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Geni dužine između 90 i 110 baza</h3>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># … čitanje kolona kao u koraku 1, pa:</span><br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> len(sequence) &gt; 90 <span style="color:#6FD3C1">and</span> len(sequence) &lt; 110:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name)</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:20px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Dužinu računamo sa <span style="color:#A8521A">len</span>; oba dela uslova moraju da važe, pa ih spajamo sa <span style="color:#A8521A">and</span>.</p>
+</div>
+</div>
+</div>
+<aside>Prva vežba je odluka tipa „da ili ne”, pa je dovoljan if; uslov je složen, jer vrsta može biti jedna od dve. Uslov u knjizi ne staje u jedan red na strani, ali je u programu jedna linija. Druga vežba ponovo koristi veći deo koda iz prve. Knjiga „između 90 i 110” tumači kao strogo veće od 90 i strogo manje od 110; ako granice treba uključiti, koristite &gt;= i &lt;=.</aside>
+</section>

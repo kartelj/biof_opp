@@ -1,0 +1,21 @@
+<section id="procenat-3" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Vežba: procenat aminokiselina, 2. deo</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Lista aminokiselina: zbir u petlji</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">protein = <span style="color:#F0A35E">"MSRSLLLRFLLFLLLLPPLP"</span><br>aa_list = [<span style="color:#F0A35E">'M'</span>, <span style="color:#F0A35E">'L'</span>, <span style="color:#F0A35E">'F'</span>]<br>total = 0<br><span style="color:#6FD3C1">for</span> aa <span style="color:#6FD3C1">in</span> aa_list:<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"counting number of "</span> + aa)<br>&#160;&#160;&#160;&#160;aa = aa.upper()<br>&#160;&#160;&#160;&#160;aa_count = protein.count(aa)<br>&#160;&#160;&#160;&#160;total = total + aa_count<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"running total is "</span> + str(total))<br>percentage = total * 100 / len(protein)<br>print(<span style="color:#F0A35E">"final percentage is "</span> + str(percentage))</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">counting number of M<br>running total is 1<br>counting number of L<br>running total is 11<br>counting number of F<br>running total is 13<br>final percentage is 65.0</p>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">total</span> pravimo pre petlje i povećavamo ga u svakom krugu: zbir koji raste.</p>
+</div>
+</div>
+</div>
+<aside>Novo u ovoj vežbi: funkcija kojoj je jedan argument lista. Ponovo prvo rešavamo jedan konkretan slučaj, pa pravimo funkciju. Postoje dva pristupa: petljom proći kroz zadate aminokiseline i sabrati koliko se puta svaka javlja, ili proći kroz protein kao kroz listu i za svaki karakter pitati da li je u listi aminokiselina. Knjiga koristi prvi; za drugi trebaju uslovi iz sledećeg poglavlja. Ispisi u petlji služe samo da vidimo kako zbir raste.</aside>
+</section>

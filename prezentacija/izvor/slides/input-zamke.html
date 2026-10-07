@@ -1,0 +1,22 @@
+<section id="input-zamke" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">09 · Fajlovi, programi i korisnički unos</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Dve zamke interaktivnog unosa</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px">
+<x-icon name="Clock" style="color:#A8521A;width:56px;height:56px"></x-icon>
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Program tiho čeka</h3>
+<p style="font-size:28px;line-height:1.45">Posle dugog računanja program traži unos, a korisnik je otišao, misleći da sve radi. Program satima stoji.</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px">
+<x-icon name="Warning" style="color:#A8521A;width:56px;height:56px"></x-icon>
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Greška u kucanju na kraju</h3>
+<p style="font-size:28px;line-height:1.45">Program dugo radi, pa traži unos, a pogrešan unos ga obori. Sve mora ispočetka.</p>
+</div>
+</div>
+<div style="background:#0F7C6E;border-radius:16px;padding:28px 36px">
+<p style="font-size:28px;line-height:1.45;color:#F6F4EE">Rešenje: sav unos prikupite na početku i odmah ga proverite. Za rad bez nadzora, u lancu alata, koristite argumente komandne linije.</p>
+</div>
+<aside>input prima jedan argument, poruku koja se prikazuje korisniku, i vraća ono što korisnik ukuca, uvek kao string; broj treba ručno pretvoriti. input se ponaša drugačije od drugih funkcija, jer čeka da korisnik nešto ukuca i pritisne Enter. Programi za analizu velikih podataka često rade dugo, pa je važno da korisnik ne mora da ih pokreće ponovo. Provera unosa (validacija) znači da odmah proverimo da li unos ima smisla: da li je broj u zadatom opsegu, da li je DNK bez nejednoznačnih baza, da li fajl postoji; ako nije, korisnik dobija drugu šansu.</aside>
+</section>

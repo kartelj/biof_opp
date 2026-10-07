@@ -1,0 +1,26 @@
+<section id="poboljsanje" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Pisanje sopstvenih funkcija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Poboljšanje funkcije</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">def</span> get_at_content(dna, sig_figs):<br>&#160;&#160;&#160;&#160;length = len(dna)<br>&#160;&#160;&#160;&#160;a_count = dna.upper().count(<span style="color:#F0A35E">'A'</span>)<br>&#160;&#160;&#160;&#160;t_count = dna.upper().count(<span style="color:#F0A35E">'T'</span>)<br>&#160;&#160;&#160;&#160;at_content = (a_count + t_count) / length<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">return</span> round(at_content, sig_figs)<br>&#160;<br>test_dna = <span style="color:#F0A35E">"ATGCATGCAACTGTAGC"</span><br>print(get_at_content(test_dna, 1))<br>print(get_at_content(test_dna, 2))<br>print(get_at_content(test_dna, 3))</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Šta je popravljeno</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Previše decimala (0.5294117647058824): <span style="color:#A8521A">round</span> zaokružuje rezultat</li>
+<li>Mala slova davala su 0.0: <span style="color:#A8521A">upper()</span> pre brojanja</li>
+<li>Broj decimala postaje drugi argument, <span style="color:#A8521A">sig_figs</span></li>
+</ul>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">0.5<br>0.53<br>0.529</p>
+</div>
+</div>
+</div>
+<aside>Prva verzija je za "ATGCATGCAACTGTAGC" vraćala 0.5294117647058824, a za sekvencu malim slovima "aactgtagctagctagcagcgta" vraćala 0.0, što je pogrešno. Ugrađena funkcija round prima broj i broj decimala na koji se zaokružuje (knjiga argument naziva sig_figs, „značajne cifre”, ali round zapravo zaokružuje na decimale). Bolje rešenje bi bilo formatirati broj tek pri ispisu, ali to izlazi iz okvira knjige.</aside>
+</section>

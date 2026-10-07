@@ -1,0 +1,26 @@
+<section id="csv-at" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Vežbe: data.csv</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">AT sadržaj i ekspresija: pazite na tip</h2>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># get_at_content iz poglavlja 5, na početku programa</span><br><span style="color:#8FB3AA"># … čitanje kolona kao u koraku 1, pa:</span><br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> get_at_content(sequence) &lt; 0.5 <span style="color:#6FD3C1">and</span> expression &gt; 200:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name)</p>
+</div>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:24px 36px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.5;color:#A8521A;white-space:nowrap">TypeError: '&gt;' not supported between<br>instances of 'str' and 'int'</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px">
+<p style="font-size:28px;line-height:1.45">Sve kolone pročitane iz fajla su stringovi, pa i <span style="color:#A8521A">expression</span>. String ne može da se poredi sa brojem 200.</p>
+</div>
+</div>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> get_at_content(sequence) &lt; 0.5 <span style="color:#6FD3C1">and</span> int(expression) &gt; 200:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name)</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:20px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Rešenje: <span style="color:#A8521A">int(expression)</span>.</p>
+</div>
+</div>
+<aside>Vežba traži gene sa AT sadržajem manjim od 0.5 i ekspresijom većom od 200. Umesto da AT sadržaj računamo ispočetka, na početak programa kopiramo funkciju get_at_content iz poglavlja 5 i koristimo njen rezultat u uslovu. Važna razlika u odnosu na knjigu: knjiga poredi expression &gt; 200 bez pretvaranja u broj. U Pythonu 2 takvo poređenje stringa i broja ne prijavljuje grešku, ali daje besmislen rezultat; Python 3 prijavljuje TypeError. Zato je potrebno int(expression).</aside>
+</section>

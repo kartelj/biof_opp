@@ -1,0 +1,27 @@
+<section id="prevod-2" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">08 · Vežba: prevođenje DNK</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 2: dokle ide range?</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">range(0, 7, 3)</span> za kraću sekvencu <span style="color:#A8521A">"ATGTT"</span>:</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">'ATG', 'TT', ''</p>
+<p style="font-size:28px;line-height:1.45">nepotpun i prazan kodon</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">range(0, 7, 3)</span> za dužu sekvencu od 23 baze:</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">'ATG', 'TTC', 'GGT'</p>
+<p style="font-size:28px;line-height:1.45">četvrti i kasniji kodoni se preskaču</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">dna = <span style="color:#F0A35E">"ATGTTCGGT"</span><br><span style="color:#8FB3AA"># početak poslednjeg kodona: još bar 2 baze iza</span><br>last_codon_start = len(dna) - 2<br><span style="color:#6FD3C1">for</span> start <span style="color:#6FD3C1">in</span> range(0, last_codon_start, 3):<br>&#160;&#160;&#160;&#160;codon = dna[start:start+3]<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"one codon is "</span> + codon)</p>
+</div>
+<p style="width:800px;font-size:28px;line-height:1.45">Kraj opsega zavisi od dužine sekvence. Nepotpun kodon na kraju se ne prevodi.</p>
+</div>
+</div>
+<aside>Fiksni brojevi u range rade samo za sekvencu od tačno tri kodona: kraća daje nepotpune i prazne kodone, a duža ostaje delimično neprevedena. Drugi argument mora da zavisi od dužine sekvence. Šta ako dužina nije deljiva sa tri? Nepotpun kodon ne možemo prevesti, pa početak poslednjeg kodona sme biti najviše dužina − 3; pošto kraj opsega nije uključen, pišemo len(dna) − 2. Tako iza svakog početka ostaju bar još dve baze, tj. ceo kodon.</aside>
+</section>

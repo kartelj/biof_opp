@@ -1,0 +1,27 @@
+<section id="egzoni-1" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">04 · Vežba: više egzona</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 1: čitanje pozicija egzona</h2>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="width:240px;position:relative;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:16px;padding:48px 32px 28px">
+<p style="position:absolute;left:32px;top:10px;width:180px;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">EXONS.TXT</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">5,58<br>72,133<br>190,276<br>340,398</p>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">exon_locations = open(<span style="color:#F0A35E">"exons.txt"</span>)<br><span style="color:#6FD3C1">for</span> line <span style="color:#6FD3C1">in</span> exon_locations:<br>&#160;&#160;&#160;&#160;positions = line.split(<span style="color:#F0A35E">','</span>)<br>&#160;&#160;&#160;&#160;print(positions)</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">['5', '58\n']<br>['72', '133\n']<br>['190', '276\n']<br>['340', '398\n']</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># u petlji, posle split:</span><br>&#160;&#160;&#160;&#160;start = positions[0]<br>&#160;&#160;&#160;&#160;stop = positions[1]<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"start is "</span> + start + <span style="color:#F0A35E">", stop is "</span> + stop)</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">start is 5, stop is 58<br>&#160;<br>start is 72, stop is 133<br>&#160;</p>
+</div>
+</div>
+<aside>Zadatak: genomic_dna.txt sadrži deo genomske DNK, a exons.txt pozicije egzona, po jedan egzon u liniji, sa početkom i krajem razdvojenim zarezom. Treba izdvojiti egzone, spojiti ih i upisati u novi fajl. Novi deo problema je čitanje fajla sa pozicijama, pa njega rešavamo prvo. split sa zarezom kao graničnikom daje listu od dva elementa; drugi element još ima znak za novi red, zbog čega se u izlazu javljaju prazni redovi. Za sada ga ignorišemo. Promenljive start i stop dobijaju nove vrednosti u svakom krugu petlje.</aside>
+</section>

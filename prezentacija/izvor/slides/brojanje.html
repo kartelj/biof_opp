@@ -1,0 +1,22 @@
+<section id="brojanje" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">08 · Rečnici</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Brojanje trinukleotida rečnikom</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">dna = <span style="color:#F0A35E">"AATGATCGATCGTACGCTGA"</span><br>counts = {}<br><span style="color:#6FD3C1">for</span> base1 <span style="color:#6FD3C1">in</span> [<span style="color:#F0A35E">'A'</span>, <span style="color:#F0A35E">'T'</span>, <span style="color:#F0A35E">'G'</span>, <span style="color:#F0A35E">'C'</span>]:<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">for</span> base2 <span style="color:#6FD3C1">in</span> [<span style="color:#F0A35E">'A'</span>, <span style="color:#F0A35E">'T'</span>, <span style="color:#F0A35E">'G'</span>, <span style="color:#F0A35E">'C'</span>]:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">for</span> base3 <span style="color:#6FD3C1">in</span> [<span style="color:#F0A35E">'A'</span>, <span style="color:#F0A35E">'T'</span>, <span style="color:#F0A35E">'G'</span>, <span style="color:#F0A35E">'C'</span>]:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;trinucleotide = base1 + base2 + base3<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;count = dna.count(trinucleotide)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> count &gt; 0:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;counts[trinucleotide] = count</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">print(counts[<span style="color:#F0A35E">'TGA'</span>])&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#8FB3AA"># 2</span><br>print(counts[<span style="color:#F0A35E">'AAA'</span>])&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#8FB3AA"># KeyError</span><br>print(<span style="color:#F0A35E">'AAA'</span> <span style="color:#6FD3C1">in</span> counts)&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#8FB3AA"># False</span><br>print(counts.get(<span style="color:#F0A35E">'AAA'</span>, 0))&#160;&#160;<span style="color:#8FB3AA"># 0</span></p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">get(ključ, podrazumevano)</h3>
+<p style="font-size:28px;line-height:1.45">Vraća podrazumevanu vrednost kad ključa nema. Zato ne moramo da čuvamo nule niti da pre svakog pristupa proveravamo sa <span style="color:#A8521A">in</span>.</p>
+</div>
+<p style="font-size:28px;line-height:1.45">Rečnik čuva samo trinukleotide koji se javljaju: <span style="color:#A8521A">{'AAT': 1, 'ATG': 1, 'ATC': 2, …}</span></p>
+</div>
+</div>
+<aside>Tri ugnežđene petlje generišu svih 64 trinukleotida, a if čuva samo one sa brojem većim od nule. Brojevi i trinukleotidi su sada zajedno u jednoj promenljivoj, pa ne moramo da pamtimo redosled niti da održavamo dve liste. Novi problem: trinukleotid koji se ne javlja nije ključ u rečniku, pa counts['AAA'] daje KeyError: 'AAA'. Rešenja: proveriti sa in, ili koristiti get sa podrazumevanom vrednošću 0. Bez drugog argumenta get vraća None kad ključa nema.</aside>
+</section>

@@ -1,0 +1,23 @@
+<section id="binning-1" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">09 · Vežba: razvrstavanje sekvenci</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 1: pronađi fajlove i dužine sekvenci</h2>
+</div>
+<div style="display:flex;gap:24px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">import</span> os<br><span style="color:#6FD3C1">for</span> file_name <span style="color:#6FD3C1">in</span> os.listdir(<span style="color:#F0A35E">"."</span>):<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> file_name.endswith(<span style="color:#F0A35E">".dna"</span>):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"reading sequences from "</span> + file_name)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dna_file = open(file_name)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">for</span> line <span style="color:#6FD3C1">in</span> dna_file:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dna = line.rstrip(<span style="color:#F0A35E">"\n"</span>)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;length = len(dna)<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"found a dna sequence with length "</span> + str(length))</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.55;color:#13262B;white-space:nowrap">reading sequences from xag.dna<br>found a dna sequence with length 432<br>found a dna sequence with length 818<br>found a dna sequence with length 604<br>found a dna sequence with length 879<br>found a dna sequence with length 619<br>…</p>
+</div>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px">
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">endswith(".dna")</span>: čitamo samo fajlove sa pravom ekstenzijom.</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px">
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">rstrip</span>: novi red nije baza, pa ga ne računamo u dužinu.</p>
+</div>
+</div>
+<aside>Zadatak: u folderu chapter_9 su fajlovi sa ekstenzijom .dna, sa DNK sekvencama različitih dužina, po jedna u liniji. Treba napraviti devet foldera, za sekvence od 100 do 199 baza, od 200 do 299 i tako dalje, i svaku sekvencu upisati u poseban fajl u odgovarajućem folderu. Prvi korak: listu fajlova daje os.listdir, a proverom ekstenzije biramo samo prave. Zatim svaki takav fajl otvaramo i čitamo liniju po liniju. Sa deset fajlova po deset sekvenci program ispisuje više od sto linija; prikazan je samo početak.</aside>
+</section>

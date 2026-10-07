@@ -1,0 +1,20 @@
+<section id="primer-csv" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Vežbe: data.csv</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Visok, nizak ili srednji AT sadržaj</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">data = open(<span style="color:#F0A35E">"data.csv"</span>)<br><span style="color:#6FD3C1">for</span> line <span style="color:#6FD3C1">in</span> data:<br>&#160;&#160;&#160;&#160;columns = line.rstrip(<span style="color:#F0A35E">"\n"</span>).split(<span style="color:#F0A35E">","</span>)<br>&#160;&#160;&#160;&#160;species = columns[0]<br>&#160;&#160;&#160;&#160;sequence = columns[1]<br>&#160;&#160;&#160;&#160;name = columns[2]<br>&#160;&#160;&#160;&#160;expression = columns[3]<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> get_at_content(sequence) &gt; 0.65:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name + <span style="color:#F0A35E">" has high AT content"</span>)<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">elif</span> get_at_content(sequence) &lt; 0.45:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name + <span style="color:#F0A35E">" has low AT content"</span>)<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">else</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name + <span style="color:#F0A35E">" has medium AT content"</span>)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">data.csv</span>: jedan gen po liniji, a polja su razdvojena zarezima: vrsta, sekvenca, ime gena, nivo ekspresije.</p>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">kdy647 has high AT content<br>jdg766 has medium AT content<br>kdy533 has medium AT content<br>hdt739 has low AT content<br>hdu045 has medium AT content<br>teg436 has medium AT content</p>
+</div>
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">get_at_content</span> je funkcija iz poglavlja 5. Linija iz fajla postaje lista kolona: <span style="color:#A8521A">rstrip</span> pa <span style="color:#A8521A">split</span>.</p>
+</div>
+</div>
+<aside>CSV znači Comma Separated Values: zamislite tabelu iz spreadsheet programa u kojoj je svaka linija red, a svako polje kolona. Ovo je rešenje poslednje vežbe poglavlja (visok, nizak ili srednji AT sadržaj), sa tri grane: if, elif i else. Podaci u data.csv su izmišljeni i dolaze uz materijale knjige (folder chapter_6). Primetite da su sva polja stringovi; ako nam ekspresija treba kao broj, pretvaramo je sa int.</aside>
+</section>

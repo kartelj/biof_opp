@@ -1,0 +1,37 @@
+<section id="slozeni" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Uslovni testovi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Složeni uslovi: and, or, not</h2>
+</div>
+<p style="font-size:28px;line-height:1.45">Za svaki <span style="color:#A8521A">acc</span> iz liste <span style="color:#A8521A">['ab56', 'bh84', 'hv76', 'ay93', 'ap97', 'bd72']</span> ispisujemo ga ako važi uslov:</p>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:32px;align-items:center">
+<div style="width:1100px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">acc.startswith(<span style="color:#F0A35E">'a'</span>) <span style="color:#6FD3C1">and</span> acc.endswith(<span style="color:#F0A35E">'3'</span>)</p>
+</div>
+<p style="flex:1;font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.4;color:#13262B">ay93</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center">
+<div style="width:1100px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">acc.startswith(<span style="color:#F0A35E">'a'</span>) <span style="color:#6FD3C1">or</span> acc.startswith(<span style="color:#F0A35E">'b'</span>)</p>
+</div>
+<p style="flex:1;font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.4;color:#13262B">ab56 bh84 ay93 ap97 bd72</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center">
+<div style="width:1100px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">(acc.startswith(<span style="color:#F0A35E">'a'</span>) <span style="color:#6FD3C1">or</span> acc.startswith(<span style="color:#F0A35E">'b'</span>)) <span style="color:#6FD3C1">and</span> acc.endswith(<span style="color:#F0A35E">'4'</span>)</p>
+</div>
+<p style="flex:1;font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.4;color:#13262B">bh84</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center">
+<div style="width:1100px;background:#13262B;border-radius:12px;padding:16px 28px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">acc.startswith(<span style="color:#F0A35E">'a'</span>) <span style="color:#6FD3C1">and not</span> acc.endswith(<span style="color:#F0A35E">'6'</span>)</p>
+</div>
+<p style="flex:1;font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.4;color:#13262B">ay93 ap97</p>
+</div>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:20px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">while</span> ponavlja blok dok je uslov tačan. Pošto je <span style="color:#A8521A">for</span> vrlo moćan, <span style="color:#A8521A">while</span> se u Pythonu retko koristi.</p>
+</div>
+<aside>Umesto dva ugnežđena if-a (počinje sa a, pa završava sa 3), uslove spajamo sa and: nema dodatnog uvlačenja i uslov se čita prirodno. or je tačan ako je bar jedan deo tačan, a not obrće uslov. Zagrade uklanjaju dvosmislenost kad kombinujemo and i or. Ove tri reči zovu se logički (bulovski) operatori; isti princip koristi i pretraga na internetu, npr. „biology python -snake”. Primer while petlje iz knjige: count = 0; while count &lt; 10: print(count); count = count + 1 (bolje je for sa range).</aside>
+</section>

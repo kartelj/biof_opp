@@ -1,0 +1,27 @@
+<section id="genomska-podela" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Vežba: podela genomske DNK</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Kodirajući i nekodirajući deo u dva fajla</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># otvori fajl i pročitaj sadržaj</span><br>dna_file = open(<span style="color:#F0A35E">"genomic_dna.txt"</span>)<br>my_dna = dna_file.read()<br><span style="color:#8FB3AA"># izdvoj delove sekvence</span><br>exon1 = my_dna[0:63]<br>intron = my_dna[63:90]<br>exon2 = my_dna[90:10000]<br><span style="color:#8FB3AA"># otvori dva izlazna fajla</span><br>coding_file = open(<span style="color:#F0A35E">"coding_dna.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br>noncoding_file = open(<span style="color:#F0A35E">"noncoding_dna.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br><span style="color:#8FB3AA"># upiši sekvence</span><br>coding_file.write(exon1 + exon2)<br>noncoding_file.write(intron)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Polazimo od rešenja iz poglavlja 2. Šta se menja:</p>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;gap:20px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">1</p>
+<p style="font-size:28px;line-height:1.45">sekvenca se čita iz fajla, umesto da je upisana u kod</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;gap:20px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">2</p>
+<p style="font-size:28px;line-height:1.45">dva nova fajl objekta za izlaz, otvorena za pisanje</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;gap:20px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">3</p>
+<p style="font-size:28px;line-height:1.45">egzoni idu u jedan fajl, intron u drugi</p>
+</div>
+</div>
+</div>
+<aside>Zadatak: genomic_dna.txt sadrži istu sekvencu kao poslednja vežba iz poglavlja 2; treba je podeliti na kodirajući i nekodirajući deo i upisati ih u dva fajla. Prazni redovi i komentari razdvajaju delove programa i čine ga čitljivijim. Granice egzona su ispravljene kao na slajdu o isecanju introna (knjiga koristi [0:62] i [62:90]). Dobra navika: na kraju zatvoriti oba izlazna fajla metodom close.</aside>
+</section>

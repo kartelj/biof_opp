@@ -1,0 +1,29 @@
+<section id="dodavanje-spajanje" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">04 · Liste i petlje</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Dodavanje elemenata i spajanje lista</h2>
+</div>
+<div style="display:flex;gap:16px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># apes: lista sa tri vrste</span><br>print(<span style="color:#F0A35E">"There are "</span> + str(len(apes)) + <span style="color:#F0A35E">" apes"</span>)<br>apes.append(<span style="color:#F0A35E">"Pan paniscus"</span>)<br>print(<span style="color:#F0A35E">"Now there are "</span> + str(len(apes)) + <span style="color:#F0A35E">" apes"</span>)</p>
+</div>
+<div style="width:400px;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">&#160;<br>There are 3 apes<br>&#160;<br>Now there are 4 apes</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">append</span> menja listu na kojoj je pozvan.</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># apes ponovo ima tri elementa</span><br>monkeys = [<span style="color:#F0A35E">"Papio ursinus"</span>, <span style="color:#F0A35E">"Macaca mulatta"</span>]<br>primates = apes + monkeys<br>print(str(len(apes)) + <span style="color:#F0A35E">" apes"</span>)<br>print(str(len(monkeys)) + <span style="color:#F0A35E">" monkeys"</span>)<br>print(str(len(primates)) + <span style="color:#F0A35E">" primates"</span>)</p>
+</div>
+<div style="width:260px;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">&#160;<br>&#160;<br>&#160;<br>3 apes<br>2 monkeys<br>5 primates</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">+</span> pravi novu listu, a originali ostaju isti. <span style="color:#A8521A">extend</span> dodaje elemente druge liste i menja listu.</p>
+</div>
+</div>
+<aside>Dužinu liste dobijamo istom funkcijom len kao za stringove. Spajanje lista znakom + radi isto kao spajanje stringova i ne menja nijednu od dve liste. Ako želimo da elemente jedne liste dodamo na kraj postojeće liste, menjajući je, koristimo extend, koji radi kao append, ali prima listu umesto jednog elementa.</aside>
+</section>

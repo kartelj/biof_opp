@@ -1,0 +1,33 @@
+<section id="pisanje" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Čitanje i pisanje fajlova</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Pisanje u fajl i zatvaranje</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Režim, drugi argument open</h3>
+<table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:28px;color:#3D4F52">
+<tr style="background:#E3EEEA"><th style="width:22%;text-align:left">Režim</th><th style="width:78%;text-align:left">Značenje</th></tr>
+<tr><td style="color:#A8521A">"r"</td><td>čitanje (podrazumevano)</td></tr>
+<tr><td style="color:#A8521A">"w"</td><td>pisanje: postojeći sadržaj se briše</td></tr>
+<tr><td style="color:#A8521A">"a"</td><td>dodavanje na kraj fajla</td></tr>
+</table>
+<p style="font-size:28px;line-height:1.45">Ako fajl ne postoji, i <span style="color:#A8521A">"w"</span> i <span style="color:#A8521A">"a"</span> prave novi.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">write i close</h3>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_file = open(<span style="color:#F0A35E">"out.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br>my_file.write(<span style="color:#F0A35E">"Hello world"</span>)<br><span style="color:#8FB3AA"># write prima bilo koji string</span><br>my_file.write(str(len(<span style="color:#F0A35E">'AGTGCTAG'</span>)))<br>my_file.write(<span style="color:#F0A35E">"ATGC"</span>.lower())<br><span style="color:#8FB3AA"># na kraju zatvorite fajl</span><br>my_file.close()</p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">write</span> radi kao <span style="color:#A8521A">print</span>, ali piše u fajl: na ekranu se ne vidi ništa, pa rezultat proverite u editoru.</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">close</span> je metod (a <span style="color:#A8521A">open</span> funkcija): ne prima argumente i ne vraća korisnu vrednost.</p>
+</div>
+</div>
+<aside>Ispis na ekran je dobar za kratke programe, ali za veliki izlaz nije: terminal može da izgubi početak izlaza, teško je pretraživati, a sve nestaje kad se terminal zatvori. Zato izlaz upisujemo u fajlove. write radi kao print, ali piše u fajl; na ekranu se ništa ne vidi, pa rezultat proverite otvaranjem out.txt u editoru. Za razliku od print, write ne dodaje novi red sam: ako želite više linija, dodajte \n. close je metod (open je funkcija); zatvaranje osigurava da je sve stvarno upisano, što je važno kada fajl dalje čita drugi program. Slovo r pred stringom (sirov string) sprečava da Python tumači obrnute kose crte u Windows putanji; objašnjenje u poglavlju 7.</aside>
+</section>

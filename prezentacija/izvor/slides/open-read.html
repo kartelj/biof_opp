@@ -1,0 +1,45 @@
+<section id="open-read" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Čitanje i pisanje fajlova</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Otvaranje i čitanje: open i read</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:32px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_file_name = <span style="color:#F0A35E">"dna.txt"</span><br>my_file = open(my_file_name)<br>my_file_contents = my_file.read()<br>print(my_file_contents)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Dve česte greške</h3>
+<div style="display:flex;flex-direction:column;gap:4px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#A8521A">my_file_name.read() → AttributeError</p>
+<p style="font-size:28px;line-height:1.4">read radi samo na fajl objektu, ne na imenu fajla</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#A8521A">print(my_file) → &lt;_io.TextIOWrapper …&gt;</p>
+<p style="font-size:28px;line-height:1.4">ispisan je fajl objekat, a ne sadržaj fajla</p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:center">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">my_file_name</p>
+<p style="font-size:28px;line-height:1.4">string: ime fajla na disku</p>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;color:#0F7C6E">open()</p>
+<x-shape kind="arrow-right" style="width:96px;height:44px;background:#0F7C6E"></x-shape>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">my_file</p>
+<p style="font-size:28px;line-height:1.4">fajl objekat: predstavlja sam fajl</p>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;color:#0F7C6E">.read()</p>
+<x-shape kind="arrow-right" style="width:96px;height:44px;background:#0F7C6E"></x-shape>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">my_file_contents</p>
+<p style="font-size:28px;line-height:1.4">string: tekst iz fajla</p>
+</div>
+</div>
+<aside>Tri promenljive, tri različita tipa i tri različite stvari: ime fajla (string), fajl objekat (novi tip koji predstavlja fajl na disku) i sadržaj (string). Imena promenljivih su proizvoljna (apple, banana, grape bi radili isto, samo bi kod bio nečitljiv), ali ime fajla nije: mora da odgovara stvarnom fajlu. Sa fajl objektima radimo uglavnom preko metoda. Puna poruka prve greške: AttributeError: 'str' object has no attribute 'read'. Python 2 bi pri ispisu objekta pokazao &lt;open file 'dna.txt', mode 'r' ...&gt;.</aside>
+</section>

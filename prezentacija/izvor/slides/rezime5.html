@@ -1,0 +1,31 @@
+<section id="rezime5" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Pisanje sopstvenih funkcija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Rezime i vežbe</h2>
+</div>
+<div style="display:flex;gap:32px;align-items:start">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Šta smo naučili</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>def, argumenti, telo i return</li>
+<li>Definicija nije poziv</li>
+<li>Opseg: promenljive funkcije žive samo u njoj</li>
+<li>Enkapsulacija i „jedan posao”</li>
+<li>Imenovani i podrazumevani argumenti</li>
+<li>Testiranje sa assert</li>
+</ul>
+</div>
+<div style="flex:1.6;background:#E3EEEA;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Vežbe: procenat aminokiselina</h3>
+<p style="font-size:28px;line-height:1.45;color:#13262B">1. Funkcija prima protein i oznaku aminokiseline i vraća njen procenat u proteinu:</p>
+<div style="background:#13262B;border-radius:12px;padding:20px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">assert</span> my_function(<span style="color:#F0A35E">"MSRSLLLRFLLFLLLLPPLP"</span>, <span style="color:#F0A35E">"M"</span>) == 5<br><span style="color:#6FD3C1">assert</span> my_function(<span style="color:#F0A35E">"MSRSLLLRFLLFLLLLPPLP"</span>, <span style="color:#F0A35E">"L"</span>) == 50</p>
+</div>
+<p style="font-size:28px;line-height:1.45;color:#13262B">2. Umesto jedne prima listu aminokiselina; bez liste vraća procenat hidrofobnih (A, I, L, M, F, W, Y, V):</p>
+<div style="background:#13262B;border-radius:12px;padding:20px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">assert</span> my_function(<span style="color:#F0A35E">"MSRSLLLRFLLFLLLLPPLP"</span>, [<span style="color:#F0A35E">'M'</span>, <span style="color:#F0A35E">'L'</span>]) == 55<br><span style="color:#6FD3C1">assert</span> my_function(<span style="color:#F0A35E">"MSRSLLLRFLLFLLLLPPLP"</span>) == 65</p>
+</div>
+</div>
+</div>
+<aside>Ostale provere iz knjige za prvi deo: oznaka "r" daje 10 (mala slova treba prevesti u velika), a "Y" daje 0. Za drugi deo: ["M"] daje 5, a ['F', 'S', 'L'] daje 70. Za drugi deo treba podrazumevana vrednost argumenta (lista hidrofobnih aminokiselina) i petlja kroz listu.</aside>
+</section>

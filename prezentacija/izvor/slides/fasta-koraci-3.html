@@ -1,0 +1,18 @@
+<section id="fasta-koraci-3" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Vežba: FASTA fajl</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 3: novi red na kraju svakog zapisa</h2>
+</div>
+<div style="display:flex;gap:24px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 36px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># header_1..3 i seq_1..3 kao u koraku 1</span><br>output = open(<span style="color:#F0A35E">"sequences.fasta"</span>, <span style="color:#F0A35E">"w"</span>)<br><span style="color:#8FB3AA"># prvi zapis</span><br>output.write(<span style="color:#F0A35E">'&gt;'</span> + header_1 + <span style="color:#F0A35E">'\n'</span> + seq_1 + <span style="color:#F0A35E">'\n'</span>)<br><span style="color:#8FB3AA"># drugi zapis, velikim slovima</span><br>output.write(<span style="color:#F0A35E">'&gt;'</span> + header_2 + <span style="color:#F0A35E">'\n'</span> + seq_2.upper() + <span style="color:#F0A35E">'\n'</span>)<br><span style="color:#8FB3AA"># treći zapis, bez crtica</span><br>output.write(<span style="color:#F0A35E">'&gt;'</span> + header_3 + <span style="color:#F0A35E">'\n'</span> + seq_3.replace(<span style="color:#F0A35E">'-'</span>, <span style="color:#F0A35E">''</span>) + <span style="color:#F0A35E">'\n'</span>)<br>output.close()</p>
+</div>
+<div style="flex:1;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 32px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.55;color:#13262B;white-space:nowrap">&gt;ABC123<br>ATCGTACGATCGATCGATCGCTAGACGTATCG<br>&gt;DEF456<br>ACTGATCGACGATCGATCGATCACGACT<br>&gt;HIJ789<br>ACTGACACTGTACTGTACATGTG</p>
+</div>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Složen argument je niz jednostavnih delova: „znak &gt;, zaglavlje, novi red, sekvenca bez crtica, novi red”.</p>
+</div>
+<aside>Argumenti za write postaju dugi, ali su sastavljeni od jednostavnih kocki koje već znamo. Poslednji red, preveden na srpski: znak veće, pa promenljiva header_3, pa novi red, pa promenljiva seq_3 u kojoj su sve crtice zamenjene ničim, pa još jedan novi red. Knjiga u konačnom kodu ne zatvara fajl; ovde je dodato output.close(), kao dobra navika iz ovog poglavlja.</aside>
+</section>

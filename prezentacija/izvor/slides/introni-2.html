@@ -1,0 +1,23 @@
+<section id="introni-2" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Vežba: isecanje introna</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Koliki deo sekvence je kodirajući?</h2>
+</div>
+<div style="display:flex;gap:16px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">exon1 = my_dna[0:63]<br>exon2 = my_dna[90:10000]<br>coding_length = len(exon1 + exon2)<br>total_length = len(my_dna)<br>print(coding_length / total_length)<br>print(100 * coding_length / total_length)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:16px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">&#160;<br>&#160;<br>&#160;<br>&#160;<br>0.7804878048780488<br>78.04878048780488</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px">
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Dužinu dobijamo iz već napisanog koda: <span style="color:#A8521A">len(exon1 + exon2)</span></li>
+<li>Množenje je <span style="color:#A8521A">*</span>, a ne x</li>
+<li>Previše decimala sređujemo kasnije (round, pogl. 5)</li>
+</ul>
+</div>
+</div>
+<aside>Vežba traži procenat, a prvi rezultat je udeo (broj između 0 i 1), pa ga množimo sa 100. Mogli smo i da izračunamo dužinu kodirajućeg dela iz koordinata egzona, ali pošto već imamo kod koji pravi kodirajuću sekvencu, jednostavnije je izmeriti njenu dužinu. U Pythonu 2 bez from __future__ import division deljenje dva cela broja dalo bi 0. Knjiga, sa granicom [0:62], dobija 77.23577235772358.</aside>
+</section>

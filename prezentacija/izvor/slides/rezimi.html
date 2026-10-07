@@ -1,0 +1,43 @@
+<section id="rezimi" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">03 · Čitanje i pisanje fajlova</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Razlika između "w" i "a"</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Režim "w": prepisuje</h3>
+<div style="display:flex;gap:24px;align-items:center">
+<div style="flex:1;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">OUT.TXT PRE</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">stari sadržaj</p>
+</div>
+<x-shape kind="arrow-right" style="width:72px;height:36px;background:#0F7C6E"></x-shape>
+<div style="width:560px;background:#13262B;border:2px solid #13262B;border-radius:16px;padding:20px 32px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">f = open(<span style="color:#F0A35E">"out.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br>f.write(<span style="color:#F0A35E">"novi red\n"</span>)<br>f.close()</p>
+</div>
+<x-shape kind="arrow-right" style="width:72px;height:36px;background:#0F7C6E"></x-shape>
+<div style="flex:1;background:#FCFBF7;border:2px solid #A8521A;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">OUT.TXT POSLE</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">novi red</p>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Režim "a": dodaje na kraj</h3>
+<div style="display:flex;gap:24px;align-items:center">
+<div style="flex:1;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">OUT.TXT PRE</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">stari sadržaj</p>
+</div>
+<x-shape kind="arrow-right" style="width:72px;height:36px;background:#0F7C6E"></x-shape>
+<div style="width:560px;background:#13262B;border:2px solid #13262B;border-radius:16px;padding:20px 32px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">f = open(<span style="color:#F0A35E">"out.txt"</span>, <span style="color:#F0A35E">"a"</span>)<br>f.write(<span style="color:#F0A35E">"novi red\n"</span>)<br>f.close()</p>
+</div>
+<x-shape kind="arrow-right" style="width:72px;height:36px;background:#0F7C6E"></x-shape>
+<div style="flex:1;background:#FCFBF7;border:2px solid #A8521A;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">OUT.TXT POSLE</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">stari sadržaj<br>novi red</p>
+</div>
+</div>
+</div>
+<aside>Drugi argument funkcije open zove se režim (mode): "r" za čitanje, "w" za pisanje i "a" za dodavanje; ima ih još, ali ova tri su najčešća. Bez drugog argumenta važi podrazumevani režim "r". Razlika između "w" i "a" je suptilna, ali važna: "w" briše postojeći sadržaj, a "a" ga čuva i dodaje na kraj. Ako fajl ne postoji, oba režima prave novi fajl. Ovde podrazumevamo da se stari sadržaj završava znakom za novi red.</aside>
+</section>

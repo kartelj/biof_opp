@@ -1,0 +1,27 @@
+<section id="primer-egzoni" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">04 · Vežba: više egzona</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 3: spajanje egzona i upis u fajl</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">genomic_dna = open(<span style="color:#F0A35E">"genomic_dna.txt"</span>).read()<br>exon_locations = open(<span style="color:#F0A35E">"exons.txt"</span>)<br>coding_sequence = <span style="color:#F0A35E">""</span><br><span style="color:#6FD3C1">for</span> line <span style="color:#6FD3C1">in</span> exon_locations:<br>&#160;&#160;&#160;&#160;positions = line.split(<span style="color:#F0A35E">','</span>)<br>&#160;&#160;&#160;&#160;start = int(positions[0])<br>&#160;&#160;&#160;&#160;stop = int(positions[1])<br>&#160;&#160;&#160;&#160;exon = genomic_dna[start:stop]<br>&#160;&#160;&#160;&#160;coding_sequence = coding_sequence + exon<br>output = open(<span style="color:#F0A35E">"coding_sequence.txt"</span>, <span style="color:#F0A35E">"w"</span>)<br>output.write(coding_sequence)<br>output.close()</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">U <span style="color:#A8521A">exons.txt</span> je jedan egzon po liniji, u obliku <span style="color:#A8521A">početak,kraj</span>.</p>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;gap:20px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">1</p>
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">split(',')</span> deli liniju na dva stringa</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;gap:20px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">2</p>
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">int()</span> pretvara string u broj, jer pozicije za isecanje moraju biti brojevi</p>
+</div>
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:20px 28px;display:flex;gap:20px;align-items:start">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;font-weight:600;color:#A8521A">3</p>
+<p style="font-size:28px;line-height:1.45">Promenljiva je sa obe strane znaka =: prvo se računa desna strana, pa se rezultat upisuje nazad</p>
+</div>
+</div>
+</div>
+<aside>Rešenje se u knjizi gradi postepeno: prvo ispis svake linije fajla, zatim ispis liste koju vraća split, pa start i stop, pa ispis svakog egzona, i na kraju sakupljanje kodirajuće sekvence. Ispisivanje coding_sequence u svakom krugu petlje pokazuje kako sekvenca raste. Poslednje tri linije upisuju rezultat u fajl, posle petlje (bez uvlačenja). Prazan string "" je početna vrednost na koju dodajemo egzone.</aside>
+</section>

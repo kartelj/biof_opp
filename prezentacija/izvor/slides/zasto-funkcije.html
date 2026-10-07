@@ -1,0 +1,25 @@
+<section id="zasto-funkcije" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">05 · Pisanje sopstvenih funkcija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Isti kod na više mesta? Napravite funkciju</h2>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_dna = <span style="color:#F0A35E">"ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT"</span><br><span style="color:#6FD3C1">length = len(my_dna)</span><br><span style="color:#6FD3C1">a_count = my_dna.count('A')</span><br><span style="color:#6FD3C1">t_count = my_dna.count('T')</span><br><span style="color:#6FD3C1">at_content = (a_count + t_count) / length</span><br>print(<span style="color:#F0A35E">"AT content is "</span> + str(at_content))</p>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Četiri istaknuta reda</h3>
+<p style="font-size:28px;line-height:1.45">računaju AT sadržaj. Gde god nam on treba, morali bismo da ih prepišemo bez greške. Zgodnija bi bila funkcija <span style="color:#A8521A">get_at_content</span>, kao print, len ili open.</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Sopstvena funkcija</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px;color:#13262B">
+<li>kod se piše jednom, koristi više puta</li>
+<li>izmena se pravi na jednom mestu</li>
+<li>delovi programa se razvijaju nezavisno</li>
+<li>ista funkcija radi i u drugim programima</li>
+</ul>
+</div>
+</div>
+<aside>Prva vežba iz poglavlja 2: ako ne računamo prvu liniju (unos sekvence) i poslednju (ispis), AT sadržaj računaju četiri linije. Mogli bismo ih sabiti u jednu, at_content = (my_dna.count('A') + my_dna.count('T')) / len(my_dna), ali bi kod bio mnogo manje čitljiv. Python nema ugrađenu funkciju za AT sadržaj, ali ima nešto još bolje: način da sami napravimo funkciju. Podela koda na funkcije omogućava i rešavanje većih problema, jer na delovima radimo odvojeno.</aside>
+</section>

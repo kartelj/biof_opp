@@ -1,0 +1,32 @@
+<section id="alternacija" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Regularni izrazi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Alternacija i grupe karaktera</h2>
+</div>
+<div style="display:grid;grid-template-columns:340px 1fr 1fr;gap:0 32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70;padding:0 0 12px 0;border-bottom:2px solid #13262B">Šablon</p>
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70;padding:0 0 12px 0;border-bottom:2px solid #13262B">Značenje</p>
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70;padding:0 0 12px 0;border-bottom:2px solid #13262B">Primer</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:30px;line-height:1.45;color:#A8521A;padding:14px 0;border-bottom:1px solid #DCDDD5">GG(A|T)CC</p>
+<p style="font-size:28px;line-height:1.45;padding:14px 0;border-bottom:1px solid #DCDDD5">A ili T na tom mestu</p>
+<p style="font-size:28px;line-height:1.45;color:#5F6F70;padding:14px 0;border-bottom:1px solid #DCDDD5">AvaII: GGACC i GGTCC</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:30px;line-height:1.45;color:#A8521A;padding:14px 0;border-bottom:1px solid #DCDDD5">GC[ATGC]GC</p>
+<p style="font-size:28px;line-height:1.45;padding:14px 0;border-bottom:1px solid #DCDDD5">jedan od navedenih karaktera</p>
+<p style="font-size:28px;line-height:1.45;color:#5F6F70;padding:14px 0;border-bottom:1px solid #DCDDD5">BisI: GCNGC, N je bilo koja baza</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:30px;line-height:1.45;color:#A8521A;padding:14px 0;border-bottom:1px solid #DCDDD5">GC.GC</p>
+<p style="font-size:28px;line-height:1.45;padding:14px 0;border-bottom:1px solid #DCDDD5">tačka: bilo koji karakter</p>
+<p style="font-size:28px;line-height:1.45;color:#5F6F70;padding:14px 0;border-bottom:1px solid #DCDDD5">poklapa i GCFGC, GC9GC</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:30px;line-height:1.45;color:#A8521A;padding:14px 0;border-bottom:1px solid #DCDDD5">[^ATGC]</p>
+<p style="font-size:28px;line-height:1.45;padding:14px 0;border-bottom:1px solid #DCDDD5">bilo koji karakter osim navedenih</p>
+<p style="font-size:28px;line-height:1.45;color:#5F6F70;padding:14px 0;border-bottom:1px solid #DCDDD5">nejednoznačne baze: N, R, Y…</p>
+</div>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">dna = <span style="color:#F0A35E">"ATCGCGAATTCAC"</span><br><span style="color:#6FD3C1">if</span> re.search(<span style="color:#F0A35E">r"GG(A|T)CC"</span>, dna):<br>&#160;&#160;&#160;&#160;print(<span style="color:#F0A35E">"restriction site found!"</span>)</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Jedan šablon umesto složenog uslova <span style="color:#A8521A">re.search(r"GGACC", dna) or re.search(r"GGTCC", dna)</span>.</p>
+</div>
+</div>
+<aside>Alternacija: u zagradama navodimo varijante razdvojene uspravnom crtom. Grupa karaktera u uglastim zagradama predstavlja tačno jedan karakter iz liste, pa je GC[ATGC]GC kraći zapis od GC(A|T|G|C)GC. Tačka je zgodna, ali prihvata i karaktere koji nisu baze, pa i znakove koji nisu slova. Kapica ^ na početku grupe obrće značenje: [^ATGC] je bilo šta osim A, T, G i C.</aside>
+</section>

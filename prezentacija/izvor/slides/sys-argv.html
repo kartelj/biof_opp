@@ -1,0 +1,51 @@
+<section id="sys-argv" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">09 · Fajlovi, programi i korisnički unos</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Argumenti komandne linije: sys.argv</h2>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># myprogram.py</span><br><span style="color:#6FD3C1">import</span> sys<br>print(sys.argv)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:20px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">$ python myprogram.py one two three</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:20px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">['myprogram.py', 'one', 'two', 'three']</p>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#A8521A">sys.argv[0]</p>
+<div style="align-self:stretch;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:12px;padding:16px 8px"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.3;text-align:center;color:#13262B">'myprogram.py'</p></div>
+<p style="font-size:28px;color:#5F6F70">ime programa</p>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#A8521A">sys.argv[1]</p>
+<div style="align-self:stretch;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:12px;padding:16px 8px"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.3;text-align:center;color:#13262B">'one'</p></div>
+<p style="font-size:28px;color:#5F6F70">prvi argument</p>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#A8521A">sys.argv[2]</p>
+<div style="align-self:stretch;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:12px;padding:16px 8px"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.3;text-align:center;color:#13262B">'two'</p></div>
+<p style="font-size:28px;color:#5F6F70">drugi argument</p>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#A8521A">sys.argv[3]</p>
+<div style="align-self:stretch;background:#FCFBF7;border:2px solid #DCDDD5;border-radius:12px;padding:16px 8px"><p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.3;text-align:center;color:#13262B">'three'</p></div>
+<p style="font-size:28px;color:#5F6F70">treći argument</p>
+</div>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Svi argumenti su stringovi: broj dobijamo sa <span style="color:#A8521A">int(sys.argv[1])</span>.</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Sav ulaz je poznat odmah, pa ga proveravamo pre obrade.</p>
+</div>
+</div>
+<aside>Argumenti komandne linije su stringovi koje kucamo posle imena programa; ne mešati ih sa argumentima funkcija, iako rade sličan posao. Prvi element sys.argv je uvek ime samog programa, pa je prvi pravi argument na indeksu 1. Prednosti: sve potrebne informacije su dostupne na početku, pa se provera (npr. da li fajlovi postoje) radi pre bilo kakve obrade; program se može pokretati iz shell skripti; korišćene opcije ostaju u istoriji komandi.</aside>
+</section>

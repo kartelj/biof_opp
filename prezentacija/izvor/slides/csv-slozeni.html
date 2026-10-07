@@ -1,0 +1,28 @@
+<section id="csv-slozeni" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">06 · Vežbe: data.csv</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Složen uslov iz tri dela</h2>
+</div>
+<div style="display:flex;gap:24px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="background:#13262B;border-radius:12px;padding:20px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">(name.startswith(<span style="color:#F0A35E">'k'</span>) <span style="color:#6FD3C1">or</span> name.startswith(<span style="color:#F0A35E">'h'</span>))</p>
+</div>
+<p style="font-size:28px;line-height:1.45">ime počinje sa k ili sa h</p>
+</div>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:36px;font-weight:600;line-height:2;color:#0F7C6E">and</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<div style="background:#13262B;border-radius:12px;padding:20px 24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">species != <span style="color:#F0A35E">"Drosophila melanogaster"</span></p>
+</div>
+<p style="font-size:28px;line-height:1.45">vrsta nije D. melanogaster</p>
+</div>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#8FB3AA"># … čitanje kolona kao u koraku 1, pa:</span><br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> (name.startswith(<span style="color:#F0A35E">'k'</span>) <span style="color:#6FD3C1">or</span> name.startswith(<span style="color:#F0A35E">'h'</span>)) <span style="color:#6FD3C1">and</span> species != <span style="color:#F0A35E">"Drosophila melanogaster"</span>:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(name)</p>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Isti uslov piše se i sa <span style="color:#A8521A">not</span>: <span style="color:#A8521A">and not species == "Drosophila melanogaster"</span>. Zagrade oko dela sa or su obavezne.</p>
+</div>
+<aside>U ovoj vežbi nema računanja; složenost je u tome što uslov ima tri dela koja treba pravilno spojiti. Bez zagrada bi and imao prednost nad or, pa bi uslov značio nešto drugo: ime počinje sa k, ili (počinje sa h i vrsta nije D. melanogaster). Zahtev „osim D. melanogaster” može se napisati znakom različitosti != ili operatorom not ispred poređenja ==; oba su ispravna.</aside>
+</section>

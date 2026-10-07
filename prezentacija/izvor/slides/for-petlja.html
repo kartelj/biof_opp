@@ -1,0 +1,32 @@
+<section id="for-petlja" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">04 · Liste i petlje</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Petlja for: ponavljanje sa varijacijom</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">apes = [<span style="color:#F0A35E">"Homo sapiens"</span>,<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#F0A35E">"Pan troglodytes"</span>,<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#F0A35E">"Gorilla gorilla"</span>]<br><span style="color:#6FD3C1">for</span> ape <span style="color:#6FD3C1">in</span> apes:<br>&#160;&#160;&#160;&#160;print(ape + <span style="color:#F0A35E">" is an ape"</span>)</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">Homo sapiens is an ape<br>Pan troglodytes is an ape<br>Gorilla gorilla is an ape</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Anatomija petlje</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li><span style="color:#A8521A">for x in y:</span> y je lista, a x redom dobija svaki element</li>
+<li>Prva linija se završava dvotačkom, a telo petlje je uvučeni blok</li>
+<li>Telo se izvršava jednom za svaki element</li>
+<li>Promenljiva petlje postoji samo unutar petlje (opseg, scope)</li>
+</ul>
+</div>
+<div style="background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:24px 32px">
+<p style="font-size:28px;line-height:1.45;color:#13262B">Sve linije bloka moraju biti uvučene isto, inače <span style="color:#A8521A">IndentationError</span>. Ne mešajte tabove i razmake.</p>
+</div>
+</div>
+</div>
+<aside>Bez petlje bismo pisali print(apes[0] + ...), print(apes[1] + ...) i tako redom: to se ponavlja i zahteva da unapred znamo broj elemenata. Sa petljom, izmena se pravi na jednom mestu, a dodavanje elemenata u listu ne zahteva nikakvu izmenu petlje. Telo može imati koliko god linija i koristiti sve dosadašnje alate, sa jednim izuzetkom: listu ne menjamo dok petlja kroz nju prolazi. Obrazac „linija sa dvotačkom, pa uvučeni blok” videćemo i kod funkcija i uslova. IndentationError se javlja pre nego što program uopšte počne da radi.</aside>
+</section>

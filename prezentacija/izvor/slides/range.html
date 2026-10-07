@@ -1,0 +1,31 @@
+<section id="range" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">04 · Liste i petlje</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Petlje sa opsezima: range</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<table style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;color:#13262B">
+<tr style="background:#E3EEEA"><th style="width:50%;text-align:left">Poziv</th><th style="width:50%;text-align:left">Brojevi</th></tr>
+<tr><td style="color:#A8521A">range(6)</td><td>0 1 2 3 4 5</td></tr>
+<tr><td style="color:#A8521A">range(3, 8)</td><td>3 4 5 6 7</td></tr>
+<tr><td style="color:#A8521A">range(2, 14, 4)</td><td>2 6 10</td></tr>
+</table>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Jedan broj: od 0 do tog broja, bez njega</li>
+<li>Dva broja: početak uključen, kraj isključen, kao kod isecanja</li>
+<li>Treći broj je korak</li>
+</ul>
+</div>
+<div style="width:740px;display:flex;flex-direction:column;gap:20px">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">protein = <span style="color:#F0A35E">"vlspadktnv"</span><br><span style="color:#6FD3C1">for</span> stop <span style="color:#6FD3C1">in</span> range(3, len(protein) + 1):<br>&#160;&#160;&#160;&#160;print(protein[0:stop])</p>
+</div>
+<div style="position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="position:absolute;right:20px;top:8px;width:140px;text-align:right;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.4;color:#13262B;white-space:nowrap">vls<br>vlsp<br>vlspa<br>vlspad<br>vlspadk<br>vlspadkt<br>vlspadktn<br>vlspadktnv</p>
+</div>
+</div>
+</div>
+<aside>Problem iz knjige: ispisati prva tri ostatka proteina, pa prva četiri, i tako dalje. Petlja preko samog stringa daje pojedinačne ostatke, a ručno pisana lista [3, 4, 5, ..., 10] je glomazna i zahteva da unapred znamo dužinu. range generiše brojeve za nas. Pošto je kraj isključen, pišemo len(protein) + 1 da bi poslednji prefiks bio ceo protein.</aside>
+</section>

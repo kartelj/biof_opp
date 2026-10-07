@@ -1,0 +1,21 @@
+<section id="len-tipovi" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">02 · Štampanje i rad sa tekstom</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Stringovi i brojevi su različiti tipovi</h2>
+</div>
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:32px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap">my_dna = <span style="color:#F0A35E">"ATGCGAGT"</span><br><span style="color:#8FB3AA"># len vraća broj (int), a ne string</span><br>dna_length = len(my_dna)<br>print(<span style="color:#F0A35E">"The length of the DNA sequence is "</span> + dna_length)<br><span style="color:#8FB3AA"># ispravno: str pretvara broj u string</span><br>print(<span style="color:#F0A35E">"The length of the DNA sequence is "</span> + str(dna_length))</p>
+</div>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="flex:1.3;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:48px 40px 28px;display:flex;flex-direction:column;gap:12px">
+<p style="position:absolute;left:40px;top:12px;width:400px;font-size:24px;font-weight:600;letter-spacing:2px;color:#5F6F70">IZLAZ ČETVRTE LINIJE</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B">TypeError: can only concatenate str (not "int") to str</p>
+<p style="font-size:28px;line-height:1.45">Python ne zna kako da spoji string (<span style="color:#A8521A">str</span>) i ceo broj (<span style="color:#A8521A">int</span>).</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Spajanje stringova: +</h3>
+<p style="font-size:28px;line-height:1.45"><span style="color:#A8521A">"AATT" + "GGCC"</span> daje <span style="color:#A8521A">"AATTGGCC"</span>. Rezultat je opet string, pa spajanje može i unutar <span style="color:#A8521A">print</span>.</p>
+</div>
+</div>
+<aside>len, kao i print, prima jedan argument, ali ništa ne ispisuje: vraća vrednost (povratnu vrednost) koju treba sačuvati ili iskoristiti. Formalno: str je funkcija koja prima jedan argument tipa broj i vraća vrednost tipa string koja ga predstavlja. Razumevanje tipova sprečava veliki deo frustracija početnika. U Pythonu 2 poruka glasi cannot concatenate 'str' and 'int' objects. Broj se može ispisati i direktno, print(dna_length), samo ne može da se spoji sa stringom bez str.</aside>
+</section>

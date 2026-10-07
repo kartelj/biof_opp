@@ -1,0 +1,30 @@
+<section id="digestija-1" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Vežba: dvostruka digestija</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Korak 1: od mesta prepoznavanja do šablona</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">AbcI</h3>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.5;color:#13262B">ANT*AAT → <span style="color:#A8521A">A[ATGC]TAAT</span></p>
+<p style="font-size:28px;line-height:1.45">N je bilo koja baza; seče 3 baze posle početka.</p>
+</div>
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">AbcII</h3>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.5;color:#13262B">GCRW*TG → <span style="color:#A8521A">GC[AG][AT]TG</span></p>
+<p style="font-size:28px;line-height:1.45">R je A ili G, W je A ili T; seče 4 baze posle početka.</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">import</span> re<br>dna = open(<span style="color:#F0A35E">"dna.txt"</span>).read().rstrip(<span style="color:#F0A35E">"\n"</span>)<br>print(<span style="color:#F0A35E">"AbcI cuts at:"</span>)<br><span style="color:#6FD3C1">for</span> match <span style="color:#6FD3C1">in</span> re.finditer(<span style="color:#F0A35E">r"A[ATGC]TAAT"</span>, dna):<br>&#160;&#160;&#160;&#160;print(match.start() + 3)</p>
+</div>
+<div style="width:300px;position:relative;background:#FCFBF7;border:2px dashed #9AAAA8;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#13262B;white-space:nowrap">&#160;<br>&#160;<br>AbcI cuts at:<br>1143<br>1628</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:20px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">start()</span> daje početak motiva (1140, 1625); enzim seče 3 baze dalje.</p>
+</div>
+</div>
+<aside>Zadatak: predvideti dužine fragmenata kada se sekvenca iz dna.txt iseče dvama izmišljenim enzimima; zvezdica u mestu prepoznavanja označava mesto sečenja. Knjiga kaže da je ovo težak problem, pa ga pojednostavljujemo: prvo jedan enzim. Kodove nejednoznačnosti (IUPAC) prevodimo u grupe karaktera. Sekvencu čitamo odjednom (jedna sekvenca, ne treba čitanje po linijama) i uklanjamo novi red. re.finditer daje sve pozicije motiva. Brojevi su iz materijala uz knjigu. Zanemarujemo hemijsku kinetiku enzima: pretpostavljamo da seku potpuno precizno i efikasno.</aside>
+</section>

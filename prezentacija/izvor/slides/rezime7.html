@@ -1,0 +1,26 @@
+<section id="rezime7" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Regularni izrazi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Rezime i vežbe</h2>
+</div>
+<div style="display:flex;gap:32px;align-items:start">
+<div style="flex:1;background:#FCFBF7;border:1px solid #DCDDD5;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Šta smo naučili</h3>
+<ul style="font-size:28px;line-height:1.45;padding:0 0 0 36px">
+<li>Moduli i import; sirovi stringovi</li>
+<li>re.search, a re.match samo od početka</li>
+<li>Alternacija, grupe karaktera, kvantifikatori, pozicije</li>
+<li>group, start i end match objekta</li>
+<li>re.split, re.findall i re.finditer</li>
+</ul>
+</div>
+<div style="flex:1.5;background:#E3EEEA;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;color:#13262B">Vežbe</h3>
+<p style="font-size:28px;line-height:1.45;color:#13262B">1. Od pristupnih brojeva ispišite one koji ispunjavaju svaki kriterijum posebno:</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.5;color:#A8521A">xkn59438, yhdck2, eihd39d9, chdsye847, hedle3455, xjhd53e, 45da, de37dp</p>
+<p style="font-size:28px;line-height:1.45;color:#13262B">sadrže 5 · sadrže d ili e · sadrže d pa e · d i e sa jednim slovom između · sadrže i d i e · počinju sa x ili y · počinju sa x ili y i završavaju se sa e · tri ili više cifara zaredom · završavaju se sa d pa a, r ili p</p>
+<p style="font-size:28px;line-height:1.45;color:#13262B">2. Dvostruka digestija: predvidite dužine fragmenata sekvence iz dna.txt posle sečenja izmišljenim enzimima AbcI (<span style="color:#A8521A">ANT*AAT</span>) i AbcII (<span style="color:#A8521A">GCRW*TG</span>); * je mesto sečenja.</p>
+</div>
+</div>
+<aside>Za drugu vežbu treba prevesti IUPAC kodove u grupe karaktera: N je bilo koja baza [ATGC], R je purin [AG], a W je A ili T [AT]. Mesta sečenja dobijamo pomoću re.finditer i metoda start, pa dužine fragmenata računamo iz razlika susednih pozicija. Za bilo koji šablon obično postoji više ispravnih regularnih izraza; birajte onaj koji je najlakše pročitati.</aside>
+</section>

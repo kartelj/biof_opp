@@ -1,0 +1,29 @@
+<section id="pristupni-2" style="background:#F6F4EE;color:#3D4F52;font-family:'IBM Plex Sans', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0F7C6E">07 · Vežba: pristupni brojevi</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1;color:#13262B">Pažljivo sa kvantifikatorima</h2>
+</div>
+<div style="display:grid;grid-template-columns:420px 300px 1fr;gap:0 32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70;padding:0 0 10px 0;border-bottom:2px solid #13262B">Kriterijum</p>
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70;padding:0 0 10px 0;border-bottom:2px solid #13262B">Šablon</p>
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5F6F70;padding:0 0 10px 0;border-bottom:2px solid #13262B">Ispisuje</p>
+<p style="font-size:28px;line-height:1.5;padding:12px 0;border-bottom:1px solid #DCDDD5">zamka: d, pa e</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.6;color:#A8521A;padding:12px 0;border-bottom:1px solid #DCDDD5">d.+e</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.75;color:#13262B;padding:12px 0;border-bottom:1px solid #DCDDD5">chdsye847 hedle3455 xjhd53e (fali de37dp)</p>
+<p style="font-size:28px;line-height:1.5;padding:12px 0;border-bottom:1px solid #DCDDD5">d, tačno jedan znak, pa e</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.6;color:#A8521A;padding:12px 0;border-bottom:1px solid #DCDDD5">d.e</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.75;color:#13262B;padding:12px 0;border-bottom:1px solid #DCDDD5">hedle3455</p>
+<p style="font-size:28px;line-height:1.5;padding:12px 0;border-bottom:1px solid #DCDDD5">d i e, bilo kojim redom</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:28px;line-height:1.6;color:#A8521A;padding:12px 0;border-bottom:1px solid #DCDDD5">d.*e, e.*d</p>
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;line-height:1.75;color:#13262B;padding:12px 0;border-bottom:1px solid #DCDDD5">eihd39d9 chdsye847 hedle3455 xjhd53e de37dp</p>
+</div>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="background:#13262B;border:2px solid #13262B;border-radius:16px;padding:28px 40px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#E8EEE9;white-space:nowrap"><span style="color:#6FD3C1">for</span> acc <span style="color:#6FD3C1">in</span> accs:<br>&#160;&#160;&#160;&#160;<span style="color:#6FD3C1">if</span> re.search(<span style="color:#F0A35E">r"d.*e"</span>, acc) <span style="color:#6FD3C1">or</span> re.search(<span style="color:#F0A35E">r"e.*d"</span>, acc):<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print(acc)</p>
+</div>
+<div style="flex:1;background:#E3EEEA;border-left:6px solid #0F7C6E;border-radius:12px;padding:20px 28px;display:flex;flex-direction:column;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#13262B"><span style="color:#A8521A">+</span> traži bar jedan znak između, pa promašuje de37dp, gde e sledi odmah posle d. Zato je potrebno <span style="color:#A8521A">*</span>.</p>
+</div>
+</div>
+<aside>Na prvi pogled d.+e izgleda dobro, ali ne pronalazi broj kod kog e dolazi odmah posle d; zvezdica dozvoljava i nula znakova između. Zahtev „d, jedno slovo, pa e” zvuči složenije, a lakše se piše: tačka bez kvantifikatora je tačno jedan znak. „Bilo kojim redom” može se napisati alternacijom (d.*e|e.*d), ali je jasnije napraviti dve pretrage i spojiti ih sa or. Napomena uz knjigu: knjiga za ovaj kriterijum navodi samo hedle3455 i de37dp, ali svih pet ispisanih brojeva sadrži i d i e; izlaz na slajdu je proveren.</aside>
+</section>
