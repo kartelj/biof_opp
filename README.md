@@ -2,7 +2,7 @@
 
 Slajdovi na srpskom jeziku prema knjizi Martina Jonesa *Python for Biologists* (2013),
 podeljeni na 9 lekcija, po jedna za svako poglavlje knjige. Svaka lekcija postoji kao PDF
-i kao PPTX. Knjiga se nalazi u folderu [`knjige`](../knjige/Jones-%20%20Python%20for%20Biologists..pdf).
+i kao PPTX. Knjiga se nalazi u folderu [`knjige`](knjige/Jones-%20%20Python%20for%20Biologists..pdf).
 
 ## Lekcije
 
