@@ -2,7 +2,7 @@
 
 Slajdovi na srpskom jeziku prema knjizi Martina Jonesa *Python for Biologists* (2013),
 podeljeni na 9 lekcija, po jedna za svako poglavlje knjige. Svaka lekcija postoji kao PDF
-(za čitanje i deljenje) i kao PPTX (za izmene i prikazivanje u PowerPoint-u).
+i kao PPTX. Knjiga se nalazi u folderu [`knjige`](../knjige/Jones-%20%20Python%20for%20Biologists..pdf).
 
 ## Lekcije
 
@@ -21,43 +21,16 @@ podeljeni na 9 lekcija, po jedna za svako poglavlje knjige. Svaka lekcija postoj
 Lekcija 1 počinje naslovnim slajdom i pregledom svih poglavlja, a lekcija 9 se završava
 pregledom naučenog i završnim slajdom.
 
-## Sadržaj foldera
+## Napomene
 
-- `lekcije/`: gotovi PDF i PPTX fajlovi.
-- `izvor/`: izvor slajdova u HTML-u. `deck.json` određuje redosled slajdova i sekcije
-  (poglavlja), a `slides/*.html` sadrži po jedan slajd (1920 × 1080 px). Beleške za
-  predavača su u elementu `<aside>` na kraju svakog slajda.
-- `alati/izvoz.py`: skripta koja od izvora pravi lekcije.
-
-## Kako ponovo napraviti PDF i PPTX
-
-Posle izmene slajdova u `izvor/`:
-
-```bash
-pip install python-pptx playwright
-python -m playwright install chromium
-python prezentacija/alati/izvoz.py          # sve lekcije
-python prezentacija/alati/izvoz.py 3 5      # samo lekcije 3 i 5
-```
-
-Za PDF je potreban internet, jer se fontovi IBM Plex Sans i IBM Plex Mono preuzimaju sa
-Google Fonts. Skripta na kraju ispisuje elemente koji možda izlaze iz okvira ili sa slajda.
-
-## Razlike između PDF i PPTX
-
-- **PDF** izgleda isto kao originalni slajdovi, sa fontovima IBM Plex Sans i IBM Plex Mono.
-- **PPTX** koristi Arial i Consolas, koji dolaze uz Office, pa izgleda isto na svakom
-  računaru. Raspored je izmeren za te fontove. Svaki tekst je zaseban okvir koji se može
-  menjati, a beleške za predavača su u beleškama slajda.
-
-## Napomene o sadržaju
-
+- Uz svaki slajd postoje beleške sa dodatnim objašnjenjima. Vide se u PPTX fajlovima,
+  u beleškama slajda (u PowerPoint-u: *View › Notes*).
 - Primeri su prilagođeni Pythonu 3 i provereni. Knjiga je pisana dok se još koristio
   Python 2; razlike su objašnjene na slajdu „Python 3 i ova knjiga” i u beleškama.
 - Nekoliko grešaka iz rešenja u knjizi je ispravljeno na slajdovima, sa objašnjenjem u
-  beleškama (granice egzona u vežbi sa intronima, poređenje `int(expression)` u vežbama sa
-  `data.csv`, uslov `<=` pri razvrstavanju sekvenci, izlazi u vežbama sa pristupnim
-  brojevima i dvostrukom digestijom).
+  beleškama: granice egzona u vežbi sa intronima, poređenje `int(expression)` u vežbama sa
+  `data.csv`, uslov `<=` pri razvrstavanju sekvenci i izlazi u vežbama sa pristupnim
+  brojevima i dvostrukom digestijom.
 - Izlazi u vežbama koje čitaju fajlove iz materijala uz knjigu (adapteri, egzoni,
   digestija, k-meri) preuzeti su iz knjige.
 
